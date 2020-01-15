@@ -137,7 +137,7 @@ return [
     /**
      * Devices
      */
-    'devices_enabled' => true,
+    'devices_enabled' => env('DEVICES_ENABLED', true),
 
     /**
      * PASSWORD STRENGTH

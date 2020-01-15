@@ -16,8 +16,6 @@ class DeviceMiddleware
      */
     public function handle($request, Closure $next)
     {
-        print_r(config("customer_portal")); die;
-
         if (config("customer_portal.devices_enabled") !== true) {
             return redirect()->back()->withErrors(utrans("errors.sectionDisabled",[],$request));
         }
