@@ -20,8 +20,8 @@ class DeviceController extends Controller
          * This is not cached, as signing a contract outside the portal cannot be detected, and so would create invalid information display here.
          */
         // $contracts = $this->apiController->getContracts(get_user()->account_id, 1);
-        // return view("pages.contracts.index", compact('contracts'));
-        echo "string"; 
+        $devices  = array();
+         return view("pages.devices.index", compact('devices'));
     }
 
     /**

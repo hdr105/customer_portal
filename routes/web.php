@@ -101,6 +101,13 @@ Route::group(['middleware' => ['language']], function () {
             Route::get("/", "ContractController@index");
             Route::get("/{contracts}", "ContractController@downloadContractPdf");
         });
+ 	/**
+         * Devices routes
+         */
+ 	Route::group(['prefix' => 'devices', 'middleware' => ['devices']], function () {
+            Route::get("/", "DeviceController@index");
+           // Route::get("/{contracts}", "ContractController@downloadContractPdf");
+        });
     });
 
     Route::get('/logout', 'AuthenticationController@logout');
