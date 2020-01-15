@@ -36,6 +36,8 @@ class CreateSystemSettingsTable extends Migration
             $table->boolean('data_usage_enabled')->nullable(false);
             $table->boolean('contracts_enabled')->nullable(false);
 
+            $table->boolean('devices_enabled')->nullable(true);
+
             $table->integer('password_strength_required')->nullable();
 
             $table->boolean('show_detailed_transactions')->nullable(false);

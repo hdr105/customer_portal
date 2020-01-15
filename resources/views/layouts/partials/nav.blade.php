@@ -49,6 +49,12 @@
                <i class="fe fe-package"></i> {{utrans("nav.contracts")}}</a>
             </li>
             @endif
+            @if(Config::get("customer_portal.devices_enabled") === true)
+              <li class="nav-item">
+               <a @if(str_contains(Route::getCurrentRoute()->uri(),"devices")) class="nav-link selected" @else class="nav-link" @endif href="{{action("DeviceController@index")}}">
+               <i class="fe fe-package"></i> {{utrans("nav.devices")}}</a>
+            </li>
+             @endif
          </ul>
          <h6 class="navbar-heading text-muted mt-4">
             My Account

@@ -135,6 +135,11 @@ return [
     'contracts_enabled' => env('CONTRACTS_ENABLED', false),
 
     /**
+     * Devices
+     */
+    'devices_enabled' => true,
+
+    /**
      * PASSWORD STRENGTH
      */
     'password_strength_required' => env('PASSWORD_STRENGTH_REQUIRED', 2),

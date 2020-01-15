@@ -6,4 +6,5 @@ return [
     'tickets' => 'Support Tickets',
     'dataUsage' => 'Data Usage',
     'contracts' => 'Contracts',
+    'devices' => 'Devices',
 ];

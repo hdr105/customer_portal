@@ -3,6 +3,7 @@
 namespace App\Http;
 
 use App\Http\Middleware\ContractMiddleware;
+use App\Http\Middleware\DeviceMiddleware;
 use App\Http\Middleware\DataUsageMiddleware;
 use App\Http\Middleware\Language;
 use App\Http\Middleware\PortalAuth;
@@ -67,5 +68,6 @@ class Kernel extends HttpKernel
         'tickets' => TicketMiddleware::class,
         'data_usage' => DataUsageMiddleware::class,
         'contracts' => ContractMiddleware::class,
+        'devices' => DeviceMiddleware::class,
     ];
 }
