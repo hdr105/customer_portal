@@ -104,45 +104,7 @@ EOF
   docker run --rm --interactive --tty --volume $PWD:/app composer:1.8.4 install
   docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
 else
-  echo "### Deleting old certificate for $NGINX_HOST ..."
-  rm -rf ./data/certbot/conf/live/$NGINX_HOST && \
-  rm -rf ./data/certbot/conf/archive/$NGINX_HOST && \
-  rm -rf ./data/certbot/conf/renewal/$NGINX_HOST.conf
-  echo
-
-  echo "### Requesting Let's Encrypt certificate for $NGINX_HOST ..."
-
-  case "$EMAIL_ADDRESS" in
-    "") email_arg="--register-unsafely-without-email" ;;
-    *) email_arg="--email $EMAIL_ADDRESS" ;;
-  esac
-
-  docker-compose -f docker-compose.yml -f docker-compose.prod.yml run --rm \
-      -p 80:80 \
-      -p 443:443 \
-      --entrypoint "\
-        certbot certonly --standalone \
-          $email_arg \
-          -d $NGINX_HOST \
-          --rsa-key-size 4096 \
-          --agree-tos \
-          --force-renewal" certbot
-  echo
   docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
-
-  until [ "`docker inspect -f {{.State.Running}} sonar-customerportal`"=="true" ]; do
-    sleep 0.1;
-  done;
-
-  echo "### Reconfiguring renewal method to webroot..."
-
-  docker-compose -f docker-compose.yml -f docker-compose.prod.yml run --rm \
-      --entrypoint "\
-        certbot certonly --webroot \
-          -d $NGINX_HOST \
-          -w /var/www/certbot \
-          --force-renewal" certbot
-  echo
 fi
 
 echo "### The app key is: $APP_KEY";
