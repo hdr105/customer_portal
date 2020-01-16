@@ -1,9 +1,6 @@
 version: '3.6'
 services:
-  certbot:
-    image: certbot/certbot
-    restart: always
-    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+  app:
     volumes:
-      - ./data/certbot/conf:/etc/letsencrypt
-      - ./data/certbot/www:/var/www/certbot
+      - ./data/certs/nginx-selfsigned.crt:/etc/letsencrypt/live/${NGINX_HOST}/fullchain.pem
+      - ./data/certs/nginx-selfsigned.key:/etc/letsencrypt/live/${NGINX_HOST}/privkey.pem
