@@ -29,28 +29,37 @@
             {{utrans("headers.devices")}}
          </h4>
       </div>
+
       <div class="table-responsive">
          <table class="table card-table">
             <thead>
                <tr>
-                    <th>{{utrans("devices.name")}}</th>
+                  <th>{{utrans("devices.name")}}</th>
                   <th>{{utrans("devices.status")}}</th>
-                  <th>{{utrans("devices.action")}}</th>  
+ 		            <th>{{utrans("devices.serial")}}</th>
+		            <th>{{utrans("devices.uptime1")}}</th> 
+                  <th>{{utrans("devices.address")}}</th> 
+ 
                </tr>
             </thead>
+           
             <tbody>
                @if(count($devices) == 0)
-               <TR>
-                  <TD colspan="3">{{utrans("devices.noDevices")}}</TD>
-               </TR>
+                  <TR>
+                     <TD colspan="3">{{utrans("devices.noDevices")}}</TD>
+                  </TR>
                @endif
-              <!--  @foreach($devices as $device)
-               <tr @if($contract->getAcceptanceDatetime() == null) class="warning" @else class="success" @endif>
-               <TD>{{$contract->getContractName()}}</TD>
-               <TD>@if($contract->getAcceptanceDatetime() == null) {{utrans("devices.pendingSignature")}} @else {{utrans("devices.signed")}} @endif</TD>
-               <TD>@if($contract->getAcceptanceDatetime() == null) <a href="{{$contract->generateSignatureLink()}}" target="_blank"><button class="btn btn-primary btn-sm"><i class="fe fe-pencil mr-2"></i>{{utrans("devices.sign")}}</button></a> @else <a href="{{action("ContractController@downloadContractPdf",['id' => $contract->getId()])}}"><button class="btn btn-sm btn-light"><i class="fe fe-file mr-2"></i>{{utrans("devices.download")}}</button></a> @endif</TD>
+               <?php //echo "<pre>"; print_r($devices) ?>
+               @foreach($devices as $contract)
+               <tr >
+                     <TD>{{ $contract->name }}</TD>
+                     <TD style="text-transform: uppercase;">@if($contract->status == 'offline') <img src="/assets/offline.png" width="20"> @else <img src="/assets/online.png" width="20"> @endif
+                        {{ $contract->status }}</TD>
+                     <TD>{{ $contract->sn }}</TD>
+                     <TD>@if(isset($contract->uptime)) {{ floor(($contract->uptime / 60) % 60) }} {{utrans("devices.minutes")}} @endif</TD>
+                     <TD>{{ $contract->address }}</TD>
                </tr>
-               @endforeach -->
+               @endforeach
              
             </tbody>
          </table>
