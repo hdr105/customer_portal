@@ -56,7 +56,7 @@
                      <TD style="text-transform: uppercase;">@if($contract->status == 'offline') <img src="/assets/offline.png" width="20"> @else <img src="/assets/online.png" width="20"> @endif
                         {{ $contract->status }}</TD>
                      <TD>{{ $contract->sn }}</TD>
-                     <TD>@if(isset($contract->uptime)) {{ floor(($contract->uptime / 60) % 60) }} {{utrans("devices.minutes")}} @endif</TD>
+                     <TD>@if($contract->status != 'offline') @if(isset($contract->uptime)) {{ floor(($contract->uptime / 60) % 60) }} {{utrans("devices.minutes")}} @endif @endif</TD>
                      <TD>{{ $contract->address }}</TD>
                </tr>
                @endforeach
