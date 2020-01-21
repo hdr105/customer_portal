@@ -45,7 +45,10 @@ class Devices extends Model
         curl_setopt($ch9, CURLOPT_TIMEOUT, 30);
         $authToken = curl_exec($ch9);
         $datafull = json_decode($authToken);
-
+       
+       // echo "<pre>";
+       // print_r($datafull);
+       // echo "</pre>";
         return $datafull->data;
     }
 

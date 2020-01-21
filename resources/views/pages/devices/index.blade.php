@@ -51,12 +51,29 @@
                @endif
                <?php //echo "<pre>"; print_r($devices) ?>
                @foreach($devices as $contract)
-               <tr >
+               <tr >       
+                           
+                           @php (@$ss = $contract->uptime)
+                           @php (@$m = floor(($ss % 3600)/60))
+
+                           @php ($h = floor(($ss % 86400)/3600))
+
+                           @php ($d = floor(($ss % 2592000)/86400))
+
+                          
+                        
                      <TD>{{ $contract->name }}</TD>
                      <TD style="text-transform: uppercase;">@if($contract->status == 'offline') <img src="/assets/offline.png" width="20"> @else <img src="/assets/online.png" width="20"> @endif
                         {{ $contract->status }}</TD>
                      <TD>{{ $contract->sn }}</TD>
-                     <TD>@if($contract->status != 'offline') @if(isset($contract->uptime)) {{ floor(($contract->uptime / 60) % 60) }} {{utrans("devices.minutes")}} @endif @endif</TD>
+                     <TD>@if($contract->status != 'offline') @if(isset($contract->uptime))  @if($d != 0) {{  $d.' Days,'}} @endif 
+                        @if($h != 0) {{  $h.' Hours,'}} @endif 
+                        @if($m != 0) {{  $m.' Minutes'}} @endif 
+
+
+                      @endif @endif
+                       
+                     </TD>
                      <TD>{{ $contract->address }}</TD>
                </tr>
                @endforeach
