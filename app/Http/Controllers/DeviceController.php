@@ -5,6 +5,7 @@ use App\Http\Requests\ProfileUpdateRequest;
 
 use Illuminate\Http\Request;
 use App\Devices;
+use App\Devices_details;
 
 use App\Http\Requests;
 use Illuminate\Support\Facades\Cache;
@@ -27,6 +28,16 @@ class DeviceController extends Controller
         $data_devices = new Devices();
         $devices  = $data_devices->curl_request_fun($contact);
         return view("pages.devices.index", compact('devices'));
+    }
+
+    public function get_device_data($device_id)
+    {
+        $user = get_user();
+        $contact = $this->getContact();
+
+        $data_devices = new Devices_details();
+        $devices  = $data_devices->curl_request_details($contact,$device_id);
+        return view("pages.devices.details", compact('devices'));
     }
 
      private function getContact()

@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Devices extends Model
+class Devices_details extends Model
 {
     
-    public function curl_request_fun($contact){
+    public function curl_request_details($contact,$device_id){
     	
     	$ch3 = curl_init();
         curl_setopt($ch3, CURLOPT_URL,"https://api.ic.peplink.com/api/oauth2/token");
@@ -17,10 +17,8 @@ class Devices extends Model
         //curl_setopt($ch3, CURLOPT_HEADER, array('content-type: application/json'));
         curl_setopt($ch3, CURLOPT_RETURNTRANSFER, true);
         $serveroutput = curl_exec ($ch3);
-       
         $access = json_decode($serveroutput);
-       
-        
+
        
         //////////////////////////////////////////
         $ch1 = curl_init();
@@ -33,25 +31,25 @@ class Devices extends Model
         curl_close($ch1);
         $response['withcode'] = json_decode($output);
 
-        
-        ///////////////////////////////////////////
-        $headers[] = 'Authorization: Bearer ' . $access->access_token;
-        $ch9 = curl_init();
-        curl_setopt($ch9, CURLOPT_URL, 'https://api.ic.peplink.com/rest/o/'.$response['withcode']->data[1]->data.'/g/'.$response['withcode']->data[0]->data.'/d/basic');
-        curl_setopt($ch9, CURLOPT_HTTPHEADER, $headers);
-        curl_setopt($ch9, CURLOPT_HEADER, 0);
-        curl_setopt($ch9, CURLOPT_CUSTOMREQUEST, "GET"); 
-        curl_setopt($ch9, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch9, CURLOPT_TIMEOUT, 30);
-        $authToken = curl_exec($ch9);
-        $datafull = json_decode($authToken);
-        return $datafull->data;
+       ///////////////////////////////////////////
+
+        $headers_auth[] = 'Authorization: Bearer ' . $access->access_token;
+        $ch10 = curl_init();
+        curl_setopt($ch10, CURLOPT_URL, 'https://api.ic.peplink.com/rest/o/'.$response['withcode']->data[1]->data.'/g/'.$response['withcode']->data[0]->data.'/d/'.$device_id);
+        curl_setopt($ch10, CURLOPT_HTTPHEADER, $headers_auth);
+        curl_setopt($ch10, CURLOPT_HEADER, 0);
+        curl_setopt($ch10, CURLOPT_CUSTOMREQUEST, "GET"); 
+        curl_setopt($ch10, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch10, CURLOPT_TIMEOUT, 30);
+        $authToken12 = curl_exec($ch10);
+        $datafull12 = json_decode($authToken12);
 
 
-        //  echo "<pre>";
-        //  print_r($datafull12);
-        //  echo "</pre>";
-        //  die;
+         // echo "<pre>";
+         // print_r($datafull12);
+         // echo "</pre>";
+         // die;
+        return $datafull12->data;
     }
 
 }

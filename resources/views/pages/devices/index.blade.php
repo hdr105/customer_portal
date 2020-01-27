@@ -62,7 +62,7 @@
 
                           
                         
-                     <TD>{{ $contract->name }}</TD>
+                     <TD><a href="devices/get-device/{{ $contract->id }}">{{ $contract->name }}</a></TD>
                      <TD style="text-transform: uppercase;">@if($contract->status == 'offline') <img src="/assets/offline.png" width="20"> @else <img src="/assets/online.png" width="20"> @endif
                         {{ $contract->status }}</TD>
                      <TD>{{ $contract->sn }}</TD>
