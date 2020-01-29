@@ -1,172 +1,11 @@
-### Deleting old self-signed certificate for localhost ...
 
-### Creating self-signed certificate for localhost ...
+### Deleting old self-signed certificate for infusion.network ...
+
+### Creating self-signed certificate for infusion.network ...
 
 [32mLoading composer repositories with package information[39m
 [32mInstalling dependencies (including require-dev) from lock file[39m
-[32mPackage operations: 88 installs, 0 updates, 0 removals[39m
-  - Installing [32mdoctrine/inflector[39m ([33mv1.3.0[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m35%[39m)Downloading ([33m70%[39m)Downloading ([33m100%[39m)
-  - Installing [32mdoctrine/lexer[39m ([33mv1.0.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m100%[39m)         
-  - Installing [32merusev/parsedown[39m ([33m1.7.3[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32msymfony/polyfill-ctype[39m ([33mv1.11.0[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m85%[39m)Downloading ([33m100%[39m)
-  - Installing [32mvlucas/phpdotenv[39m ([33mv2.6.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m100%[39m)
-  - Installing [32msymfony/css-selector[39m ([33mv4.2.8[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m90%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32mtijsverkoyen/css-to-inline-styles[39m ([33m2.2.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m40%[39m)Downloading ([33m80%[39m)Downloading ([33m100%[39m)
-  - Installing [32msymfony/polyfill-mbstring[39m ([33mv1.13.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m30%[39m)Downloading ([33m60%[39m)Downloading ([33m90%[39m)Downloading ([33m100%[39m)
-  - Installing [32msymfony/var-dumper[39m ([33mv3.4.27[39m): Downloading ([33mconnecting...[39m)Downloading ([33m100%[39m)         
-  - Installing [32msymfony/routing[39m ([33mv3.4.27[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m10%[39m)Downloading ([33m15%[39m)Downloading ([33m20%[39m)Downloading ([33m25%[39m)Downloading ([33m30%[39m)Downloading ([33m35%[39m)Downloading ([33m40%[39m)Downloading ([33m45%[39m)Downloading ([33m50%[39m)Downloading ([33m55%[39m)Downloading ([33m60%[39m)Downloading ([33m65%[39m)Downloading ([33m70%[39m)Downloading ([33m75%[39m)Downloading ([33m80%[39m)Downloading ([33m85%[39m)Downloading ([33m90%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32msymfony/process[39m ([33mv3.4.27[39m): Downloading ([33mconnecting...[39m)Downloading ([33m100%[39m)         
-  - Installing [32mparagonie/random_compat[39m ([33mv9.99.99[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m45%[39m)Downloading ([33m90%[39m)Downloading ([33m100%[39m)
-  - Installing [32msymfony/polyfill-php70[39m ([33mv1.13.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m85%[39m)Downloading ([33m100%[39m)
-  - Installing [32msymfony/http-foundation[39m ([33mv3.4.36[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m10%[39m)Downloading ([33m15%[39m)Downloading ([33m20%[39m)Downloading ([33m25%[39m)Downloading ([33m30%[39m)Downloading ([33m35%[39m)Downloading ([33m40%[39m)Downloading ([33m45%[39m)Downloading ([33m50%[39m)Downloading ([33m55%[39m)Downloading ([33m60%[39m)Downloading ([33m65%[39m)Downloading ([33m70%[39m)Downloading ([33m75%[39m)Downloading ([33m80%[39m)Downloading ([33m85%[39m)Downloading ([33m90%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32msymfony/contracts[39m ([33mv1.1.0[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m10%[39m)Downloading ([33m25%[39m)Downloading ([33m40%[39m)Downloading ([33m50%[39m)Downloading ([33m60%[39m)Downloading ([33m75%[39m)Downloading ([33m85%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32msymfony/event-dispatcher[39m ([33mv4.2.8[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m10%[39m)Downloading ([33m15%[39m)Downloading ([33m20%[39m)Downloading ([33m25%[39m)Downloading ([33m30%[39m)Downloading ([33m35%[39m)Downloading ([33m40%[39m)Downloading ([33m45%[39m)Downloading ([33m50%[39m)Downloading ([33m55%[39m)Downloading ([33m60%[39m)Downloading ([33m65%[39m)Downloading ([33m70%[39m)Downloading ([33m75%[39m)Downloading ([33m80%[39m)Downloading ([33m85%[39m)Downloading ([33m90%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32mpsr/log[39m ([33m1.1.0[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m65%[39m)Downloading ([33m90%[39m)Downloading ([33m100%[39m)
-  - Installing [32msymfony/debug[39m ([33mv3.4.27[39m): Downloading ([33mconnecting...[39m)Downloading ([33m100%[39m)         
-  - Installing [32msymfony/http-kernel[39m ([33mv3.4.27[39m): Downloading ([33mconnecting...[39m)Downloading ([33m100%[39m)         
-  - Installing [32msymfony/finder[39m ([33mv3.4.27[39m): Downloading ([33mconnecting...[39m)Downloading ([33m100%[39m)         
-  - Installing [32msymfony/console[39m ([33mv3.4.27[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m10%[39m)Downloading ([33m15%[39m)Downloading ([33m20%[39m)Downloading ([33m25%[39m)Downloading ([33m30%[39m)Downloading ([33m35%[39m)Downloading ([33m40%[39m)Downloading ([33m45%[39m)Downloading ([33m50%[39m)Downloading ([33m55%[39m)Downloading ([33m60%[39m)Downloading ([33m65%[39m)Downloading ([33m70%[39m)Downloading ([33m75%[39m)Downloading ([33m80%[39m)Downloading ([33m85%[39m)Downloading ([33m90%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32msymfony/polyfill-php72[39m ([33mv1.11.0[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m80%[39m)Downloading ([33m100%[39m)
-  - Installing [32msymfony/polyfill-intl-idn[39m ([33mv1.11.0[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m45%[39m)Downloading ([33m90%[39m)Downloading ([33m100%[39m)
-  - Installing [32msymfony/polyfill-iconv[39m ([33mv1.11.0[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m10%[39m)Downloading ([33m15%[39m)Downloading ([33m20%[39m)Downloading ([33m25%[39m)Downloading ([33m30%[39m)Downloading ([33m35%[39m)Downloading ([33m40%[39m)Downloading ([33m45%[39m)Downloading ([33m50%[39m)Downloading ([33m55%[39m)Downloading ([33m60%[39m)Downloading ([33m65%[39m)Downloading ([33m70%[39m)Downloading ([33m75%[39m)Downloading ([33m80%[39m)Downloading ([33m85%[39m)Downloading ([33m90%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32megulias/email-validator[39m ([33m2.1.7[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m25%[39m)Downloading ([33m50%[39m)Downloading ([33m75%[39m)Downloading ([33m100%[39m)
-  - Installing [32mswiftmailer/swiftmailer[39m ([33mv6.2.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m10%[39m)Downloading ([33m15%[39m)Downloading ([33m20%[39m)Downloading ([33m25%[39m)Downloading ([33m30%[39m)Downloading ([33m35%[39m)Downloading ([33m40%[39m)Downloading ([33m45%[39m)Downloading ([33m50%[39m)Downloading ([33m55%[39m)Downloading ([33m60%[39m)Downloading ([33m65%[39m)Downloading ([33m70%[39m)Downloading ([33m75%[39m)Downloading ([33m80%[39m)Downloading ([33m85%[39m)Downloading ([33m100%[39m)
-  - Installing [32mramsey/uuid[39m ([33m3.8.0[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m10%[39m)Downloading ([33m20%[39m)Downloading ([33m35%[39m)Downloading ([33m40%[39m)Downloading ([33m50%[39m)Downloading ([33m60%[39m)Downloading ([33m75%[39m)Downloading ([33m85%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32mpsr/simple-cache[39m ([33m1.0.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m30%[39m)Downloading ([33m60%[39m)Downloading ([33m100%[39m)
-  - Installing [32mpsr/container[39m ([33m1.0.0[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m75%[39m)Downloading ([33m100%[39m)
-  - Installing [32msymfony/translation[39m ([33mv4.2.8[39m): Downloading ([33mconnecting...[39m)Downloading ([33m100%[39m)         
-  - Installing [32mnesbot/carbon[39m ([33m1.37.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m20%[39m)Downloading ([33m25%[39m)Downloading ([33m30%[39m)Downloading ([33m35%[39m)Downloading ([33m40%[39m)Downloading ([33m55%[39m)Downloading ([33m70%[39m)Downloading ([33m75%[39m)Downloading ([33m80%[39m)Downloading ([33m90%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32mmtdowling/cron-expression[39m ([33mv1.2.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m10%[39m)Downloading ([33m100%[39m)
-  - Installing [32mmonolog/monolog[39m ([33m1.24.0[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m10%[39m)Downloading ([33m15%[39m)Downloading ([33m20%[39m)Downloading ([33m25%[39m)Downloading ([33m30%[39m)Downloading ([33m35%[39m)Downloading ([33m40%[39m)Downloading ([33m45%[39m)Downloading ([33m50%[39m)Downloading ([33m55%[39m)Downloading ([33m60%[39m)Downloading ([33m65%[39m)Downloading ([33m70%[39m)Downloading ([33m75%[39m)Downloading ([33m80%[39m)Downloading ([33m85%[39m)Downloading ([33m90%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32mleague/flysystem[39m ([33m1.0.51[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m15%[39m)Downloading ([33m40%[39m)Downloading ([33m55%[39m)Downloading ([33m60%[39m)Downloading ([33m75%[39m)Downloading ([33m85%[39m)Downloading ([33m100%[39m)
-  - Installing [32mlaravel/framework[39m ([33mv5.5.45[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m10%[39m)Downloading ([33m15%[39m)Downloading ([33m20%[39m)Downloading ([33m25%[39m)Downloading ([33m30%[39m)Downloading ([33m35%[39m)Downloading ([33m40%[39m)Downloading ([33m45%[39m)Downloading ([33m50%[39m)Downloading ([33m55%[39m)Downloading ([33m60%[39m)Downloading ([33m65%[39m)Downloading ([33m70%[39m)Downloading ([33m75%[39m)Downloading ([33m80%[39m)Downloading ([33m85%[39m)Downloading ([33m90%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32mfideloper/proxy[39m ([33m3.3.4[39m): Downloading ([33mconnecting...[39m)Downloading ([33m100%[39m)         
-  - Installing [32mralouphie/getallheaders[39m ([33m2.0.5[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m55%[39m)Downloading ([33m100%[39m)
-  - Installing [32mpsr/http-message[39m ([33m1.0.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m45%[39m)Downloading ([33m70%[39m)Downloading ([33m100%[39m)
-  - Installing [32mguzzlehttp/psr7[39m ([33m1.5.2[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m10%[39m)Downloading ([33m15%[39m)Downloading ([33m45%[39m)Downloading ([33m50%[39m)Downloading ([33m55%[39m)Downloading ([33m60%[39m)Downloading ([33m65%[39m)Downloading ([33m100%[39m)
-  - Installing [32mguzzlehttp/promises[39m ([33mv1.3.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m30%[39m)Downloading ([33m60%[39m)Downloading ([33m90%[39m)Downloading ([33m100%[39m)
-  - Installing [32mguzzlehttp/guzzle[39m ([33m6.3.3[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m15%[39m)Downloading ([33m20%[39m)Downloading ([33m25%[39m)Downloading ([33m35%[39m)Downloading ([33m40%[39m)Downloading ([33m45%[39m)Downloading ([33m60%[39m)Downloading ([33m65%[39m)Downloading ([33m70%[39m)Downloading ([33m80%[39m)Downloading ([33m85%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32mgocardless/gocardless-pro[39m ([33m1.7.0[39m): Downloading ([33mconnecting...[39m)Downloading ([33m100%[39m)         
-  - Installing [32mjakub-onderka/php-console-color[39m ([33mv0.2[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m50%[39m)Downloading ([33m100%[39m)
-  - Installing [32mnikic/php-parser[39m ([33mv4.2.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m10%[39m)Downloading ([33m15%[39m)Downloading ([33m20%[39m)Downloading ([33m25%[39m)Downloading ([33m30%[39m)Downloading ([33m35%[39m)Downloading ([33m40%[39m)Downloading ([33m45%[39m)Downloading ([33m50%[39m)Downloading ([33m55%[39m)Downloading ([33m60%[39m)Downloading ([33m65%[39m)Downloading ([33m70%[39m)Downloading ([33m75%[39m)Downloading ([33m80%[39m)Downloading ([33m85%[39m)Downloading ([33m100%[39m)
-  - Installing [32mjakub-onderka/php-console-highlighter[39m ([33mv0.4[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m15%[39m)Downloading ([33m100%[39m)
-  - Installing [32mdnoegel/php-xdg-base-dir[39m ([33m0.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m100%[39m)
-  - Installing [32mpsy/psysh[39m ([33mv0.9.9[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m10%[39m)Downloading ([33m15%[39m)Downloading ([33m20%[39m)Downloading ([33m25%[39m)Downloading ([33m30%[39m)Downloading ([33m35%[39m)Downloading ([33m40%[39m)Downloading ([33m45%[39m)Downloading ([33m50%[39m)Downloading ([33m55%[39m)Downloading ([33m60%[39m)Downloading ([33m65%[39m)Downloading ([33m70%[39m)Downloading ([33m75%[39m)Downloading ([33m80%[39m)Downloading ([33m85%[39m)Downloading ([33m90%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32mlaravel/tinker[39m ([33mv1.0.8[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m100%[39m)
-  - Installing [32mlaravelcollective/html[39m ([33mv5.5.4[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m75%[39m)Downloading ([33m100%[39m)
-  - Installing [32mtedivm/jshrink[39m ([33mv1.0.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m100%[39m)         
-  - Installing [32mmariuzzo/laravel-js-localization[39m ([33mdev-master 1ad478d[39m): Downloading ([33mconnecting...[39m)Downloading ([33m100%[39m)         
-  - Installing [32mpaypal/rest-api-sdk-php[39m ([33m1.14.0[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m10%[39m)Downloading ([33m15%[39m)Downloading ([33m20%[39m)Downloading ([33m25%[39m)Downloading ([33m30%[39m)Downloading ([33m35%[39m)Downloading ([33m40%[39m)Downloading ([33m45%[39m)Downloading ([33m50%[39m)Downloading ([33m55%[39m)Downloading ([33m60%[39m)Downloading ([33m65%[39m)Downloading ([33m70%[39m)Downloading ([33m75%[39m)Downloading ([33m80%[39m)Downloading ([33m85%[39m)Downloading ([33m90%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32mpredis/predis[39m ([33mv1.1.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m10%[39m)Downloading ([33m15%[39m)Downloading ([33m20%[39m)Downloading ([33m25%[39m)Downloading ([33m30%[39m)Downloading ([33m35%[39m)Downloading ([33m40%[39m)Downloading ([33m45%[39m)Downloading ([33m50%[39m)Downloading ([33m55%[39m)Downloading ([33m60%[39m)Downloading ([33m65%[39m)Downloading ([33m70%[39m)Downloading ([33m75%[39m)Downloading ([33m80%[39m)Downloading ([33m85%[39m)Downloading ([33m90%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32mproengsoft/laravel-jsvalidation[39m ([33mv1.6.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m100%[39m)         
-  - Installing [32minacho/php-credit-card-validator[39m ([33m1.0.2[39m): Downloading ([33mconnecting...[39m)Downloading ([33m100%[39m)         
-  - Installing [32msonarsoftware/customer_portal_framework[39m ([33m1.0.15[39m): Downloading ([33mconnecting...[39m)Downloading ([33m100%[39m)         
-  - Installing [32mfilp/whoops[39m ([33m2.3.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m10%[39m)Downloading ([33m20%[39m)Downloading ([33m30%[39m)Downloading ([33m45%[39m)Downloading ([33m55%[39m)Downloading ([33m65%[39m)Downloading ([33m75%[39m)Downloading ([33m85%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32mfzaninotto/faker[39m ([33mv1.8.0[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m10%[39m)Downloading ([33m15%[39m)Downloading ([33m20%[39m)Downloading ([33m25%[39m)Downloading ([33m30%[39m)Downloading ([33m35%[39m)Downloading ([33m40%[39m)Downloading ([33m45%[39m)Downloading ([33m50%[39m)Downloading ([33m55%[39m)Downloading ([33m60%[39m)Downloading ([33m65%[39m)Downloading ([33m70%[39m)Downloading ([33m75%[39m)Downloading ([33m80%[39m)Downloading ([33m85%[39m)Downloading ([33m90%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32mhamcrest/hamcrest-php[39m ([33mv1.2.2[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m10%[39m)Downloading ([33m15%[39m)Downloading ([33m20%[39m)Downloading ([33m25%[39m)Downloading ([33m35%[39m)Downloading ([33m40%[39m)Downloading ([33m45%[39m)Downloading ([33m55%[39m)Downloading ([33m60%[39m)Downloading ([33m65%[39m)Downloading ([33m70%[39m)Downloading ([33m80%[39m)Downloading ([33m85%[39m)Downloading ([33m90%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32mmockery/mockery[39m ([33m0.9.11[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m10%[39m)Downloading ([33m15%[39m)Downloading ([33m20%[39m)Downloading ([33m25%[39m)Downloading ([33m30%[39m)Downloading ([33m35%[39m)Downloading ([33m40%[39m)Downloading ([33m45%[39m)Downloading ([33m50%[39m)Downloading ([33m55%[39m)Downloading ([33m60%[39m)Downloading ([33m65%[39m)Downloading ([33m70%[39m)Downloading ([33m75%[39m)Downloading ([33m80%[39m)Downloading ([33m85%[39m)Downloading ([33m90%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32mwebmozart/assert[39m ([33m1.4.0[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m65%[39m)Downloading ([33m100%[39m)
-  - Installing [32mphpdocumentor/reflection-common[39m ([33m1.0.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m100%[39m)
-  - Installing [32mphpdocumentor/type-resolver[39m ([33m0.4.0[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m75%[39m)Downloading ([33m80%[39m)Downloading ([33m85%[39m)Downloading ([33m90%[39m)Downloading ([33m100%[39m)
-  - Installing [32mphpdocumentor/reflection-docblock[39m ([33m4.3.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m10%[39m)Downloading ([33m15%[39m)Downloading ([33m20%[39m)Downloading ([33m25%[39m)Downloading ([33m30%[39m)Downloading ([33m35%[39m)Downloading ([33m40%[39m)Downloading ([33m45%[39m)Downloading ([33m50%[39m)Downloading ([33m55%[39m)Downloading ([33m60%[39m)Downloading ([33m65%[39m)Downloading ([33m70%[39m)Downloading ([33m75%[39m)Downloading ([33m80%[39m)Downloading ([33m85%[39m)Downloading ([33m90%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32mphpunit/php-token-stream[39m ([33m2.0.2[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m10%[39m)Downloading ([33m55%[39m)Downloading ([33m60%[39m)Downloading ([33m65%[39m)Downloading ([33m70%[39m)Downloading ([33m75%[39m)Downloading ([33m100%[39m)
-  - Installing [32msebastian/version[39m ([33m2.0.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m100%[39m)
-  - Installing [32msebastian/resource-operations[39m ([33m1.0.0[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m65%[39m)Downloading ([33m100%[39m)
-  - Installing [32msebastian/recursion-context[39m ([33m3.0.0[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m35%[39m)Downloading ([33m70%[39m)Downloading ([33m100%[39m)
-  - Installing [32msebastian/object-reflector[39m ([33m1.1.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m65%[39m)Downloading ([33m100%[39m)
-  - Installing [32msebastian/object-enumerator[39m ([33m3.0.3[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m100%[39m)
-  - Installing [32msebastian/global-state[39m ([33m2.0.0[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m20%[39m)Downloading ([33m75%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32msebastian/exporter[39m ([33m3.1.0[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m85%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32msebastian/environment[39m ([33m3.1.0[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m45%[39m)Downloading ([33m90%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32msebastian/diff[39m ([33m2.0.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m45%[39m)Downloading ([33m70%[39m)Downloading ([33m80%[39m)Downloading ([33m100%[39m)
-  - Installing [32msebastian/comparator[39m ([33m2.1.3[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m10%[39m)Downloading ([33m35%[39m)Downloading ([33m45%[39m)Downloading ([33m55%[39m)Downloading ([33m70%[39m)Downloading ([33m80%[39m)Downloading ([33m100%[39m)
-  - Installing [32mphpunit/php-text-template[39m ([33m1.2.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m35%[39m)Downloading ([33m85%[39m)Downloading ([33m100%[39m)
-  - Installing [32mdoctrine/instantiator[39m ([33m1.2.0[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32mphpunit/phpunit-mock-objects[39m ([33m5.0.10[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m10%[39m)Downloading ([33m20%[39m)Downloading ([33m25%[39m)Downloading ([33m30%[39m)Downloading ([33m40%[39m)Downloading ([33m45%[39m)Downloading ([33m50%[39m)Downloading ([33m55%[39m)Downloading ([33m60%[39m)Downloading ([33m65%[39m)Downloading ([33m70%[39m)Downloading ([33m75%[39m)Downloading ([33m80%[39m)Downloading ([33m85%[39m)Downloading ([33m90%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32mphpunit/php-timer[39m ([33m1.0.9[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m45%[39m)Downloading ([33m90%[39m)Downloading ([33m100%[39m)
-  - Installing [32mphpunit/php-file-iterator[39m ([33m1.4.5[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m100%[39m)
-  - Installing [32mtheseer/tokenizer[39m ([33m1.1.2[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m15%[39m)Downloading ([33m30%[39m)Downloading ([33m45%[39m)Downloading ([33m60%[39m)Downloading ([33m75%[39m)Downloading ([33m90%[39m)Downloading ([33m100%[39m)
-  - Installing [32msebastian/code-unit-reverse-lookup[39m ([33m1.0.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m55%[39m)Downloading ([33m100%[39m)
-  - Installing [32mphpunit/php-code-coverage[39m ([33m5.3.2[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m10%[39m)Downloading ([33m15%[39m)Downloading ([33m20%[39m)Downloading ([33m25%[39m)Downloading ([33m30%[39m)Downloading ([33m35%[39m)Downloading ([33m40%[39m)Downloading ([33m45%[39m)Downloading ([33m50%[39m)Downloading ([33m55%[39m)Downloading ([33m60%[39m)Downloading ([33m65%[39m)Downloading ([33m70%[39m)Downloading ([33m75%[39m)Downloading ([33m80%[39m)Downloading ([33m85%[39m)Downloading ([33m90%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32mphpspec/prophecy[39m ([33m1.8.0[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m10%[39m)Downloading ([33m15%[39m)Downloading ([33m25%[39m)Downloading ([33m35%[39m)Downloading ([33m45%[39m)Downloading ([33m55%[39m)Downloading ([33m65%[39m)Downloading ([33m75%[39m)Downloading ([33m80%[39m)Downloading ([33m85%[39m)Downloading ([33m90%[39m)Downloading ([33m100%[39m)
-  - Installing [32mphar-io/version[39m ([33m1.0.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m50%[39m)Downloading ([33m55%[39m)Downloading ([33m100%[39m)
-  - Installing [32mphar-io/manifest[39m ([33m1.0.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m10%[39m)Downloading ([33m15%[39m)Downloading ([33m25%[39m)Downloading ([33m35%[39m)Downloading ([33m45%[39m)Downloading ([33m50%[39m)Downloading ([33m60%[39m)Downloading ([33m70%[39m)Downloading ([33m80%[39m)Downloading ([33m90%[39m)Downloading ([33m100%[39m)
-  - Installing [32mmyclabs/deep-copy[39m ([33m1.9.1[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m15%[39m)Downloading ([33m30%[39m)Downloading ([33m55%[39m)Downloading ([33m70%[39m)Downloading ([33m75%[39m)Downloading ([33m90%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-  - Installing [32mphpunit/phpunit[39m ([33m6.5.14[39m): Downloading ([33mconnecting...[39m)Downloading ([33m0%[39m)           Downloading ([33m5%[39m)Downloading ([33m10%[39m)Downloading ([33m15%[39m)Downloading ([33m20%[39m)Downloading ([33m25%[39m)Downloading ([33m30%[39m)Downloading ([33m35%[39m)Downloading ([33m40%[39m)Downloading ([33m45%[39m)Downloading ([33m50%[39m)Downloading ([33m55%[39m)Downloading ([33m60%[39m)Downloading ([33m65%[39m)Downloading ([33m70%[39m)Downloading ([33m75%[39m)Downloading ([33m80%[39m)Downloading ([33m85%[39m)Downloading ([33m90%[39m)Downloading ([33m95%[39m)Downloading ([33m100%[39m)
-symfony/var-dumper suggests installing ext-intl (To show region name in time zone dump)
-symfony/var-dumper suggests installing ext-symfony_debug
-symfony/routing suggests installing doctrine/annotations (For using the annotation loader)
-symfony/routing suggests installing symfony/config (For using the all-in-one router or any loader)
-symfony/routing suggests installing symfony/expression-language (For using expression matching)
-symfony/routing suggests installing symfony/yaml (For using the YAML loader)
-paragonie/random_compat suggests installing ext-libsodium (Provides a modern crypto API that can be used to generate random bytes.)
-symfony/contracts suggests installing psr/cache (When using the Cache contracts)
-symfony/contracts suggests installing symfony/cache-contracts-implementation
-symfony/contracts suggests installing symfony/event-dispatcher-implementation
-symfony/contracts suggests installing symfony/http-client-contracts-implementation
-symfony/contracts suggests installing symfony/service-contracts-implementation
-symfony/event-dispatcher suggests installing symfony/dependency-injection
-symfony/http-kernel suggests installing symfony/browser-kit
-symfony/http-kernel suggests installing symfony/config
-symfony/http-kernel suggests installing symfony/dependency-injection
-symfony/console suggests installing symfony/lock
-symfony/polyfill-intl-idn suggests installing ext-intl (For best performance)
-egulias/email-validator suggests installing ext-intl (PHP Internationalization Libraries are required to use the SpoofChecking validation)
-swiftmailer/swiftmailer suggests installing ext-intl (Needed to support internationalized email addresses)
-swiftmailer/swiftmailer suggests installing true/punycode (Needed to support internationalized email addresses, if ext-intl is not installed)
-ramsey/uuid suggests installing ext-libsodium (Provides the PECL libsodium extension for use with the SodiumRandomGenerator)
-ramsey/uuid suggests installing ext-uuid (Provides the PECL UUID extension for use with the PeclUuidTimeGenerator and PeclUuidRandomGenerator)
-ramsey/uuid suggests installing ircmaxell/random-lib (Provides RandomLib for use with the RandomLibAdapter)
-ramsey/uuid suggests installing moontoast/math (Provides support for converting UUID to 128-bit integer (in string form).)
-ramsey/uuid suggests installing ramsey/uuid-console (A console application for generating UUIDs with ramsey/uuid)
-ramsey/uuid suggests installing ramsey/uuid-doctrine (Allows the use of Ramsey\Uuid\Uuid as Doctrine field type.)
-symfony/translation suggests installing symfony/config
-symfony/translation suggests installing symfony/yaml
-nesbot/carbon suggests installing friendsofphp/php-cs-fixer (Needed for the `composer phpcs` command. Allow to automatically fix code style.)
-nesbot/carbon suggests installing phpstan/phpstan (Needed for the `composer phpstan` command. Allow to detect potential errors.)
-monolog/monolog suggests installing aws/aws-sdk-php (Allow sending log messages to AWS services like DynamoDB)
-monolog/monolog suggests installing doctrine/couchdb (Allow sending log messages to a CouchDB server)
-monolog/monolog suggests installing ext-amqp (Allow sending log messages to an AMQP server (1.0+ required))
-monolog/monolog suggests installing ext-mongo (Allow sending log messages to a MongoDB server)
-monolog/monolog suggests installing graylog2/gelf-php (Allow sending log messages to a GrayLog2 server)
-monolog/monolog suggests installing mongodb/mongodb (Allow sending log messages to a MongoDB server via PHP Driver)
-monolog/monolog suggests installing php-amqplib/php-amqplib (Allow sending log messages to an AMQP server using php-amqplib)
-monolog/monolog suggests installing php-console/php-console (Allow sending log messages to Google Chrome)
-monolog/monolog suggests installing rollbar/rollbar (Allow sending log messages to Rollbar)
-monolog/monolog suggests installing ruflin/elastica (Allow sending log messages to an Elastic Search server)
-monolog/monolog suggests installing sentry/sentry (Allow sending log messages to a Sentry server)
-league/flysystem suggests installing league/flysystem-aws-s3-v2 (Allows you to use S3 storage with AWS SDK v2)
-league/flysystem suggests installing league/flysystem-aws-s3-v3 (Allows you to use S3 storage with AWS SDK v3)
-league/flysystem suggests installing league/flysystem-azure (Allows you to use Windows Azure Blob storage)
-league/flysystem suggests installing league/flysystem-cached-adapter (Flysystem adapter decorator for metadata caching)
-league/flysystem suggests installing league/flysystem-eventable-filesystem (Allows you to use EventableFilesystem)
-league/flysystem suggests installing league/flysystem-rackspace (Allows you to use Rackspace Cloud Files)
-league/flysystem suggests installing league/flysystem-sftp (Allows you to use SFTP server storage via phpseclib)
-league/flysystem suggests installing league/flysystem-webdav (Allows you to use WebDAV storage)
-league/flysystem suggests installing league/flysystem-ziparchive (Allows you to use ZipArchive adapter)
-league/flysystem suggests installing spatie/flysystem-dropbox (Allows you to use Dropbox storage)
-league/flysystem suggests installing srmklive/flysystem-dropbox-v2 (Allows you to use Dropbox storage for PHP 5 applications)
-laravel/framework suggests installing aws/aws-sdk-php (Required to use the SQS queue driver and SES mail driver (~3.0).)
-laravel/framework suggests installing doctrine/dbal (Required to rename columns and drop SQLite columns (~2.5).)
-laravel/framework suggests installing ext-pcntl (Required to use all features of the queue worker.)
-laravel/framework suggests installing league/flysystem-aws-s3-v3 (Required to use the Flysystem S3 driver (~1.0).)
-laravel/framework suggests installing league/flysystem-cached-adapter (Required to use Flysystem caching (~1.0).)
-laravel/framework suggests installing league/flysystem-rackspace (Required to use the Flysystem Rackspace driver (~1.0).)
-laravel/framework suggests installing nexmo/client (Required to use the Nexmo transport (~1.0).)
-laravel/framework suggests installing pda/pheanstalk (Required to use the beanstalk queue driver (~3.0).)
-laravel/framework suggests installing pusher/pusher-php-server (Required to use the Pusher broadcast driver (~3.0).)
-laravel/framework suggests installing symfony/dom-crawler (Required to use most of the crawler integration testing tools (~3.3).)
-laravel/framework suggests installing symfony/psr-http-message-bridge (Required to psr7 bridging features (~1.0).)
-psy/psysh suggests installing ext-pcntl (Enabling the PCNTL extension makes PsySH a lot happier :))
-psy/psysh suggests installing ext-pdo-sqlite (The doc command requires SQLite to work.)
-psy/psysh suggests installing hoa/console (A pure PHP readline implementation. You'll want this if your PHP install doesn't already support readline or libedit.)
-predis/predis suggests installing ext-phpiredis (Allows faster serialization and deserialization of the Redis protocol)
-filp/whoops suggests installing whoops/soap (Formats errors as SOAP responses)
-sebastian/global-state suggests installing ext-uopz (*)
-phpunit/phpunit-mock-objects suggests installing ext-soap (*)
-phpunit/php-code-coverage suggests installing ext-xdebug (^2.5.5)
-phpunit/phpunit suggests installing ext-xdebug (*)
-phpunit/phpunit suggests installing phpunit/php-invoker (^1.1)
+Nothing to install or update
 [30;43mPackage phpunit/phpunit-mock-objects is abandoned, you should avoid using it. No replacement was suggested.[39;49m
 [32mGenerating autoload files[39m
 > Illuminate\Foundation\ComposerScripts::postAutoloadDump
@@ -178,693 +17,66 @@ Discovered Package: mariuzzo/laravel-js-localization
 Discovered Package: nesbot/carbon
 Package manifest generated successfully.
 > Illuminate\Foundation\ComposerScripts::postInstall
-latest: Pulling from v2tec/watchtower
-5.0.4-alpine: Pulling from library/redis
 Step 1/19 : FROM phusion/baseimage:0.11 as base
-0.11: Pulling from phusion/baseimage
-Digest: sha256:6ba22a31a809de669243b79f982f7b2df733ead1ec45becff401b4d5d79150bb
-Status: Downloaded newer image for phusion/baseimage:0.11
  ---> 14e6c478b00a
 Step 2/19 : ENV LC_ALL C.UTF-8
- ---> Running in c6c6bf5baa8d
-Removing intermediate container c6c6bf5baa8d
- ---> 455d9da14d21
+ ---> Using cache
+ ---> 167cb1594954
 Step 3/19 : RUN add-apt-repository ppa:ondrej/php  && add-apt-repository ppa:ondrej/nginx-mainline  && install_clean       gettext       nginx       php7.3-fpm       php7.3-bcmath       php7.3-curl       php7.3-gmp       php7.3-mbstring       php7.3-sqlite3       php7.3-zip       unzip
- ---> Running in 9087be2529aa
- Co-installable PHP versions: PHP 5.6, PHP 7.x and most requested extensions are included. Only Supported Versions of PHP (http://php.net/supported-versions.php) for Supported Ubuntu Releases (https://wiki.ubuntu.com/Releases) are provided. Don't ask for end-of-life PHP versions or Ubuntu release, they won't be provided.
-
-Debian oldstable and stable packages are provided as well: https://deb.sury.org/#debian-dpa
-
-You can get more information about the packages at https://deb.sury.org
-
-BUGS&FEATURES: This PPA now has a issue tracker:
-https://deb.sury.org/#bug-reporting
-
-CAVEATS:
-1. If you are using php-gearman, you need to add ppa:ondrej/pkg-gearman
-2. If you are using apache2, you are advised to add ppa:ondrej/apache2
-3. If you are using nginx, you are advise to add ppa:ondrej/nginx-mainline
-   or ppa:ondrej/nginx
-
-PLEASE READ: If you like my work and want to give me a little motivation, please consider donating regularly: https://donate.sury.org/
-
-WARNING: add-apt-repository is broken with non-UTF-8 locales, see 
-https://github.com/oerdnj/deb.sury.org/issues/56 for workaround:
-
-# LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
- More info: https://launchpad.net/~ondrej/+archive/ubuntu/php
-Get:1 http://ppa.launchpad.net/ondrej/php/ubuntu bionic InRelease [20.8 kB]
-Get:2 http://archive.ubuntu.com/ubuntu bionic InRelease [242 kB]
-Get:3 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
-Get:4 http://ppa.launchpad.net/ondrej/php/ubuntu bionic/main amd64 Packages [62.4 kB]
-Get:5 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
-Get:6 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
-Get:7 http://security.ubuntu.com/ubuntu bionic-security/universe Sources [209 kB]
-Get:8 http://archive.ubuntu.com/ubuntu bionic/multiverse Sources [216 kB]
-Get:9 http://archive.ubuntu.com/ubuntu bionic/restricted Sources [5823 B]
-Get:10 http://archive.ubuntu.com/ubuntu bionic/main Sources [1063 kB]
-Get:11 http://security.ubuntu.com/ubuntu bionic-security/restricted Sources [4535 B]
-Get:12 http://security.ubuntu.com/ubuntu bionic-security/main Sources [171 kB]
-Get:13 http://security.ubuntu.com/ubuntu bionic-security/multiverse Sources [3235 B]
-Get:14 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [777 kB]
-Get:15 http://archive.ubuntu.com/ubuntu bionic/universe Sources [11.5 MB]
-Get:16 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [6781 B]
-Get:17 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [21.8 kB]
-Get:18 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [804 kB]
-Get:19 http://archive.ubuntu.com/ubuntu bionic/restricted amd64 Packages [13.5 kB]
-Get:20 http://archive.ubuntu.com/ubuntu bionic/main amd64 Packages [1344 kB]
-Get:21 http://archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [11.3 MB]
-Get:22 http://archive.ubuntu.com/ubuntu bionic/multiverse amd64 Packages [186 kB]
-Get:23 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse Sources [6209 B]
-Get:24 http://archive.ubuntu.com/ubuntu bionic-updates/restricted Sources [6861 B]
-Get:25 http://archive.ubuntu.com/ubuntu bionic-updates/universe Sources [359 kB]
-Get:26 http://archive.ubuntu.com/ubuntu bionic-updates/main Sources [386 kB]
-Get:27 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [1074 kB]
-Get:28 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [10.8 kB]
-Get:29 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [1329 kB]
-Get:30 http://archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [35.5 kB]
-Get:31 http://archive.ubuntu.com/ubuntu bionic-backports/universe Sources [2529 B]
-Get:32 http://archive.ubuntu.com/ubuntu bionic-backports/main Sources [2569 B]
-Get:33 http://archive.ubuntu.com/ubuntu bionic-backports/main amd64 Packages [2496 B]
-Get:34 http://archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [4241 B]
-Fetched 31.5 MB in 32s (994 kB/s)
-Reading package lists...
- This branch follows latest NGINX Mainline packages compiled against latest OpenSSL for HTTP/2 and TLS 1.3 support.
-
-BUGS&FEATURES: This PPA now has a issue tracker: https://deb.sury.org/#bug-reporting
-
-PLEASE READ: If you like my work and want to give me a little motivation, please consider donating: https://donate.sury.org
- More info: https://launchpad.net/~ondrej/+archive/ubuntu/nginx-mainline
-Get:1 http://ppa.launchpad.net/ondrej/nginx-mainline/ubuntu bionic InRelease [20.8 kB]
-Hit:2 http://archive.ubuntu.com/ubuntu bionic InRelease
-Hit:3 http://security.ubuntu.com/ubuntu bionic-security InRelease
-Hit:4 http://archive.ubuntu.com/ubuntu bionic-updates InRelease
-Hit:5 http://archive.ubuntu.com/ubuntu bionic-backports InRelease
-Hit:6 http://ppa.launchpad.net/ondrej/php/ubuntu bionic InRelease
-Get:7 http://ppa.launchpad.net/ondrej/nginx-mainline/ubuntu bionic/main amd64 Packages [7794 B]
-Fetched 28.6 kB in 1s (22.1 kB/s)
-Reading package lists...
-Installing gettext nginx php7.3-fpm php7.3-bcmath php7.3-curl php7.3-gmp php7.3-mbstring php7.3-sqlite3 php7.3-zip unzip
-Hit:1 http://security.ubuntu.com/ubuntu bionic-security InRelease
-Hit:2 http://archive.ubuntu.com/ubuntu bionic InRelease
-Hit:3 http://ppa.launchpad.net/ondrej/nginx-mainline/ubuntu bionic InRelease
-Hit:4 http://archive.ubuntu.com/ubuntu bionic-updates InRelease
-Hit:5 http://archive.ubuntu.com/ubuntu bionic-backports InRelease
-Hit:6 http://ppa.launchpad.net/ondrej/php/ubuntu bionic InRelease
-Reading package lists...
-Reading package lists...
-Building dependency tree...
-Reading state information...
-The following additional packages will be installed:
-  fontconfig-config fonts-dejavu-core gcc-8-base gettext-base libapparmor1
-  libargon2-0 libcroco3 libfontconfig1 libfreetype6 libgcc1 libgd3 libgeoip1
-  libgomp1 libicu64 libjbig0 libjpeg-turbo8 libjpeg8 libmagic-mgc libmagic1
-  libmaxminddb0 libnginx-mod-http-auth-pam libnginx-mod-http-dav-ext
-  libnginx-mod-http-echo libnginx-mod-http-geoip libnginx-mod-http-geoip2
-  libnginx-mod-http-image-filter libnginx-mod-http-subs-filter
-  libnginx-mod-http-upstream-fair libnginx-mod-http-xslt-filter
-  libnginx-mod-mail libnginx-mod-ssl-ct libnginx-mod-stream libpcre2-8-0
-  libpng16-16 libsodium23 libssl1.1 libstdc++6 libtiff5 libwebp6 libx11-6
-  libx11-data libxau6 libxcb1 libxdmcp6 libxml2 libxpm4 libxslt1.1 libzip4
-  multiarch-support nginx-common nginx-full php-common php7.3-cli
-  php7.3-common php7.3-json php7.3-opcache php7.3-readline tzdata
-Suggested packages:
-  gettext-doc autopoint libasprintf-dev libgettextpo-dev libgd-tools geoip-bin
-  file mmdb-bin fcgiwrap nginx-doc ssl-cert php-pear zip
-Recommended packages:
-  geoip-database
-The following NEW packages will be installed:
-  fontconfig-config fonts-dejavu-core gettext gettext-base libapparmor1
-  libargon2-0 libcroco3 libfontconfig1 libfreetype6 libgd3 libgeoip1 libgomp1
-  libicu64 libjbig0 libjpeg-turbo8 libjpeg8 libmagic-mgc libmagic1
-  libmaxminddb0 libnginx-mod-http-auth-pam libnginx-mod-http-dav-ext
-  libnginx-mod-http-echo libnginx-mod-http-geoip libnginx-mod-http-geoip2
-  libnginx-mod-http-image-filter libnginx-mod-http-subs-filter
-  libnginx-mod-http-upstream-fair libnginx-mod-http-xslt-filter
-  libnginx-mod-mail libnginx-mod-ssl-ct libnginx-mod-stream libpcre2-8-0
-  libpng16-16 libsodium23 libtiff5 libwebp6 libx11-6 libx11-data libxau6
-  libxcb1 libxdmcp6 libxml2 libxpm4 libxslt1.1 libzip4 multiarch-support nginx
-  nginx-common nginx-full php-common php7.3-bcmath php7.3-cli php7.3-common
-  php7.3-curl php7.3-fpm php7.3-gmp php7.3-json php7.3-mbstring php7.3-opcache
-  php7.3-readline php7.3-sqlite3 php7.3-zip tzdata unzip
-The following packages will be upgraded:
-  gcc-8-base libgcc1 libssl1.1 libstdc++6
-4 upgraded, 64 newly installed, 0 to remove and 86 not upgraded.
-Need to get 22.7 MB of archives.
-After this operation, 87.0 MB of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu bionic/main amd64 multiarch-support amd64 2.27-3ubuntu1 [6916 B]
-Get:2 http://ppa.launchpad.net/ondrej/php/ubuntu bionic/main amd64 libicu64 amd64 64.2-0.1+ubuntu18.04.1+deb.sury.org+1 [8361 kB]
-Get:3 http://archive.ubuntu.com/ubuntu bionic/main amd64 libxau6 amd64 1:1.0.8-1 [8376 B]
-Get:4 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libjpeg-turbo8 amd64 1.5.2-0ubuntu5.18.04.3 [110 kB]
-Get:5 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 gcc-8-base amd64 8.3.0-6ubuntu1~18.04.1 [18.7 kB]
-Get:6 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libstdc++6 amd64 8.3.0-6ubuntu1~18.04.1 [400 kB]
-Get:7 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libgcc1 amd64 1:8.3.0-6ubuntu1~18.04.1 [40.7 kB]
-Get:8 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libapparmor1 amd64 2.12-4ubuntu5.1 [31.3 kB]
-Get:9 http://archive.ubuntu.com/ubuntu bionic/main amd64 libargon2-0 amd64 0~20161029-1.1 [19.9 kB]
-Get:10 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libmagic-mgc amd64 1:5.32-2ubuntu0.3 [184 kB]
-Get:11 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libmagic1 amd64 1:5.32-2ubuntu0.3 [68.7 kB]
-Get:12 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 tzdata all 2019c-0ubuntu0.18.04 [190 kB]
-Get:13 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 gettext-base amd64 0.19.8.1-6ubuntu0.3 [113 kB]
-Get:14 http://archive.ubuntu.com/ubuntu bionic/main amd64 libgeoip1 amd64 1.6.12-1 [71.8 kB]
-Get:15 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpng16-16 amd64 1.6.34-1ubuntu0.18.04.2 [176 kB]
-Get:16 http://archive.ubuntu.com/ubuntu bionic/main amd64 libxdmcp6 amd64 1:1.1.2-3 [10.7 kB]
-Get:17 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libxcb1 amd64 1.13-2~ubuntu18.04 [45.5 kB]
-Get:18 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libx11-data all 2:1.6.4-3ubuntu0.2 [113 kB]
-Get:19 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libx11-6 amd64 2:1.6.4-3ubuntu0.2 [569 kB]
-Get:20 http://archive.ubuntu.com/ubuntu bionic/main amd64 fonts-dejavu-core all 2.37-1 [1041 kB]
-Get:21 http://archive.ubuntu.com/ubuntu bionic/main amd64 fontconfig-config all 2.12.6-0ubuntu2 [55.8 kB]
-Get:22 http://archive.ubuntu.com/ubuntu bionic/main amd64 libcroco3 amd64 0.6.12-2 [81.3 kB]
-Get:23 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libgomp1 amd64 8.3.0-6ubuntu1~18.04.1 [76.4 kB]
-Get:24 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 gettext amd64 0.19.8.1-6ubuntu0.3 [1293 kB]
-Get:25 http://archive.ubuntu.com/ubuntu bionic/main amd64 libfreetype6 amd64 2.8.1-2ubuntu2 [335 kB]
-Get:26 http://archive.ubuntu.com/ubuntu bionic/main amd64 libfontconfig1 amd64 2.12.6-0ubuntu2 [137 kB]
-Get:27 http://archive.ubuntu.com/ubuntu bionic/main amd64 libjpeg8 amd64 8c-2ubuntu8 [2194 B]
-Get:28 http://archive.ubuntu.com/ubuntu bionic/main amd64 libjbig0 amd64 2.1-3.1build1 [26.7 kB]
-Get:29 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libtiff5 amd64 4.0.9-5ubuntu0.3 [153 kB]
-Get:30 http://archive.ubuntu.com/ubuntu bionic/main amd64 libwebp6 amd64 0.6.1-2 [185 kB]
-Get:31 http://archive.ubuntu.com/ubuntu bionic/main amd64 libxpm4 amd64 1:3.5.12-1 [34.0 kB]
-Get:32 http://ppa.launchpad.net/ondrej/php/ubuntu bionic/main amd64 libxml2 amd64 2.9.9+dfsg-1+ubuntu18.04.1+deb.sury.org+2 [720 kB]
-Get:33 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libxslt1.1 amd64 1.1.29-5ubuntu0.2 [150 kB]
-Get:34 http://archive.ubuntu.com/ubuntu bionic/main amd64 unzip amd64 6.0-21ubuntu1 [167 kB]
-Get:35 http://ppa.launchpad.net/ondrej/php/ubuntu bionic/main amd64 libgd3 amd64 2.2.5-5.2+ubuntu18.04.1+deb.sury.org+1 [135 kB]
-Get:36 http://ppa.launchpad.net/ondrej/nginx-mainline/ubuntu bionic/main amd64 libmaxminddb0 amd64 1.3.2-1+ubuntu18.04.1+deb.sury.org+2 [30.8 kB]
-Get:37 http://ppa.launchpad.net/ondrej/nginx-mainline/ubuntu bionic/main amd64 nginx-common all 1.17.5-1+ubuntu18.04.1+deb.sury.org+1 [58.9 kB]
-Get:38 http://ppa.launchpad.net/ondrej/nginx-mainline/ubuntu bionic/main amd64 libnginx-mod-http-auth-pam amd64 1.17.5-1+ubuntu18.04.1+deb.sury.org+1 [30.7 kB]
-Get:39 http://ppa.launchpad.net/ondrej/nginx-mainline/ubuntu bionic/main amd64 libnginx-mod-http-dav-ext amd64 1.17.5-1+ubuntu18.04.1+deb.sury.org+1 [38.0 kB]
-Get:40 http://ppa.launchpad.net/ondrej/nginx-mainline/ubuntu bionic/main amd64 libnginx-mod-http-echo amd64 1.17.5-1+ubuntu18.04.1+deb.sury.org+1 [42.0 kB]
-Get:41 http://ppa.launchpad.net/ondrej/nginx-mainline/ubuntu bionic/main amd64 libnginx-mod-http-geoip amd64 1.17.5-1+ubuntu18.04.1+deb.sury.org+1 [31.9 kB]
-Get:42 http://ppa.launchpad.net/ondrej/nginx-mainline/ubuntu bionic/main amd64 libnginx-mod-http-geoip2 amd64 1.17.5-1+ubuntu18.04.1+deb.sury.org+1 [32.4 kB]
-Get:43 http://ppa.launchpad.net/ondrej/nginx-mainline/ubuntu bionic/main amd64 libnginx-mod-http-image-filter amd64 1.17.5-1+ubuntu18.04.1+deb.sury.org+1 [35.3 kB]
-Get:44 http://ppa.launchpad.net/ondrej/nginx-mainline/ubuntu bionic/main amd64 libnginx-mod-http-subs-filter amd64 1.17.5-1+ubuntu18.04.1+deb.sury.org+1 [33.7 kB]
-Get:45 http://ppa.launchpad.net/ondrej/nginx-mainline/ubuntu bionic/main amd64 libnginx-mod-http-upstream-fair amd64 1.17.5-1+ubuntu18.04.1+deb.sury.org+1 [33.8 kB]
-Get:46 http://ppa.launchpad.net/ondrej/nginx-mainline/ubuntu bionic/main amd64 libnginx-mod-http-xslt-filter amd64 1.17.5-1+ubuntu18.04.1+deb.sury.org+1 [33.7 kB]
-Get:47 http://ppa.launchpad.net/ondrej/nginx-mainline/ubuntu bionic/main amd64 libnginx-mod-mail amd64 1.17.5-1+ubuntu18.04.1+deb.sury.org+1 [62.7 kB]
-Get:48 http://ppa.launchpad.net/ondrej/nginx-mainline/ubuntu bionic/main amd64 libnginx-mod-ssl-ct amd64 1.17.5-1+ubuntu18.04.1+deb.sury.org+1 [31.6 kB]
-Get:49 http://ppa.launchpad.net/ondrej/nginx-mainline/ubuntu bionic/main amd64 libnginx-mod-stream amd64 1.17.5-1+ubuntu18.04.1+deb.sury.org+1 [87.7 kB]
-Get:50 http://ppa.launchpad.net/ondrej/php/ubuntu bionic/main amd64 libpcre2-8-0 amd64 10.34-7+ubuntu18.04.1+deb.sury.org+1 [196 kB]
-Get:51 http://ppa.launchpad.net/ondrej/php/ubuntu bionic/main amd64 libsodium23 amd64 1.0.18-1+ubuntu18.04.1+deb.sury.org+1 [150 kB]
-Get:52 http://ppa.launchpad.net/ondrej/nginx-mainline/ubuntu bionic/main amd64 libssl1.1 amd64 1.1.1d-1+ubuntu18.04.1+deb.sury.org+2 [1523 kB]
-Get:53 http://ppa.launchpad.net/ondrej/php/ubuntu bionic/main amd64 libzip4 amd64 1.5.1-4+ubuntu18.04.1+deb.sury.org+2 [50.6 kB]
-Get:54 http://ppa.launchpad.net/ondrej/nginx-mainline/ubuntu bionic/main amd64 nginx-full amd64 1.17.5-1+ubuntu18.04.1+deb.sury.org+1 [444 kB]
-Get:55 http://ppa.launchpad.net/ondrej/nginx-mainline/ubuntu bionic/main amd64 nginx all 1.17.5-1+ubuntu18.04.1+deb.sury.org+1 [26.3 kB]
-Get:56 http://ppa.launchpad.net/ondrej/php/ubuntu bionic/main amd64 php-common all 2:71+ubuntu18.04.1+deb.sury.org+1 [15.2 kB]
-Get:57 http://ppa.launchpad.net/ondrej/php/ubuntu bionic/main amd64 php7.3-common amd64 7.3.13-1+ubuntu18.04.1+deb.sury.org+1 [944 kB]
-Get:58 http://ppa.launchpad.net/ondrej/php/ubuntu bionic/main amd64 php7.3-bcmath amd64 7.3.13-1+ubuntu18.04.1+deb.sury.org+1 [15.0 kB]
-Get:59 http://ppa.launchpad.net/ondrej/php/ubuntu bionic/main amd64 php7.3-json amd64 7.3.13-1+ubuntu18.04.1+deb.sury.org+1 [18.4 kB]
-Get:60 http://ppa.launchpad.net/ondrej/php/ubuntu bionic/main amd64 php7.3-opcache amd64 7.3.13-1+ubuntu18.04.1+deb.sury.org+1 [182 kB]
-Get:61 http://ppa.launchpad.net/ondrej/php/ubuntu bionic/main amd64 php7.3-readline amd64 7.3.13-1+ubuntu18.04.1+deb.sury.org+1 [12.0 kB]
-Get:62 http://ppa.launchpad.net/ondrej/php/ubuntu bionic/main amd64 php7.3-cli amd64 7.3.13-1+ubuntu18.04.1+deb.sury.org+1 [1380 kB]
-Get:63 http://ppa.launchpad.net/ondrej/php/ubuntu bionic/main amd64 php7.3-curl amd64 7.3.13-1+ubuntu18.04.1+deb.sury.org+1 [29.6 kB]
-Get:64 http://ppa.launchpad.net/ondrej/php/ubuntu bionic/main amd64 php7.3-fpm amd64 7.3.13-1+ubuntu18.04.1+deb.sury.org+1 [1390 kB]
-Get:65 http://ppa.launchpad.net/ondrej/php/ubuntu bionic/main amd64 php7.3-gmp amd64 7.3.13-1+ubuntu18.04.1+deb.sury.org+1 [20.9 kB]
-Get:66 http://ppa.launchpad.net/ondrej/php/ubuntu bionic/main amd64 php7.3-mbstring amd64 7.3.13-1+ubuntu18.04.1+deb.sury.org+1 [518 kB]
-Get:67 http://ppa.launchpad.net/ondrej/php/ubuntu bionic/main amd64 php7.3-sqlite3 amd64 7.3.13-1+ubuntu18.04.1+deb.sury.org+1 [25.5 kB]
-Get:68 http://ppa.launchpad.net/ondrej/php/ubuntu bionic/main amd64 php7.3-zip amd64 7.3.13-1+ubuntu18.04.1+deb.sury.org+1 [20.6 kB]
-[91mdpkg-preconfigure: unable to re-open stdin: 
-[0mFetched 22.7 MB in 50s (451 kB/s)
-Selecting previously unselected package multiarch-support.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 8531 files and directories currently installed.)
-Preparing to unpack .../multiarch-support_2.27-3ubuntu1_amd64.deb ...
-Unpacking multiarch-support (2.27-3ubuntu1) ...
-Setting up multiarch-support (2.27-3ubuntu1) ...
-Selecting previously unselected package libxau6:amd64.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 8534 files and directories currently installed.)
-Preparing to unpack .../libxau6_1%3a1.0.8-1_amd64.deb ...
-Unpacking libxau6:amd64 (1:1.0.8-1) ...
-Selecting previously unselected package libjpeg-turbo8:amd64.
-Preparing to unpack .../libjpeg-turbo8_1.5.2-0ubuntu5.18.04.3_amd64.deb ...
-Unpacking libjpeg-turbo8:amd64 (1.5.2-0ubuntu5.18.04.3) ...
-Preparing to unpack .../gcc-8-base_8.3.0-6ubuntu1~18.04.1_amd64.deb ...
-Unpacking gcc-8-base:amd64 (8.3.0-6ubuntu1~18.04.1) over (8-20180414-1ubuntu2) ...
-Setting up gcc-8-base:amd64 (8.3.0-6ubuntu1~18.04.1) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 8544 files and directories currently installed.)
-Preparing to unpack .../libstdc++6_8.3.0-6ubuntu1~18.04.1_amd64.deb ...
-Unpacking libstdc++6:amd64 (8.3.0-6ubuntu1~18.04.1) over (8-20180414-1ubuntu2) ...
-Setting up libstdc++6:amd64 (8.3.0-6ubuntu1~18.04.1) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 8544 files and directories currently installed.)
-Preparing to unpack .../libgcc1_1%3a8.3.0-6ubuntu1~18.04.1_amd64.deb ...
-Unpacking libgcc1:amd64 (1:8.3.0-6ubuntu1~18.04.1) over (1:8-20180414-1ubuntu2) ...
-Setting up libgcc1:amd64 (1:8.3.0-6ubuntu1~18.04.1) ...
-Selecting previously unselected package libapparmor1:amd64.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 8544 files and directories currently installed.)
-Preparing to unpack .../00-libapparmor1_2.12-4ubuntu5.1_amd64.deb ...
-Unpacking libapparmor1:amd64 (2.12-4ubuntu5.1) ...
-Selecting previously unselected package libargon2-0:amd64.
-Preparing to unpack .../01-libargon2-0_0~20161029-1.1_amd64.deb ...
-Unpacking libargon2-0:amd64 (0~20161029-1.1) ...
-Selecting previously unselected package libmagic-mgc.
-Preparing to unpack .../02-libmagic-mgc_1%3a5.32-2ubuntu0.3_amd64.deb ...
-Unpacking libmagic-mgc (1:5.32-2ubuntu0.3) ...
-Selecting previously unselected package libmagic1:amd64.
-Preparing to unpack .../03-libmagic1_1%3a5.32-2ubuntu0.3_amd64.deb ...
-Unpacking libmagic1:amd64 (1:5.32-2ubuntu0.3) ...
-Selecting previously unselected package tzdata.
-Preparing to unpack .../04-tzdata_2019c-0ubuntu0.18.04_all.deb ...
-Unpacking tzdata (2019c-0ubuntu0.18.04) ...
-Selecting previously unselected package gettext-base.
-Preparing to unpack .../05-gettext-base_0.19.8.1-6ubuntu0.3_amd64.deb ...
-Unpacking gettext-base (0.19.8.1-6ubuntu0.3) ...
-Selecting previously unselected package libgeoip1:amd64.
-Preparing to unpack .../06-libgeoip1_1.6.12-1_amd64.deb ...
-Unpacking libgeoip1:amd64 (1.6.12-1) ...
-Selecting previously unselected package libpng16-16:amd64.
-Preparing to unpack .../07-libpng16-16_1.6.34-1ubuntu0.18.04.2_amd64.deb ...
-Unpacking libpng16-16:amd64 (1.6.34-1ubuntu0.18.04.2) ...
-Selecting previously unselected package libxdmcp6:amd64.
-Preparing to unpack .../08-libxdmcp6_1%3a1.1.2-3_amd64.deb ...
-Unpacking libxdmcp6:amd64 (1:1.1.2-3) ...
-Selecting previously unselected package libxcb1:amd64.
-Preparing to unpack .../09-libxcb1_1.13-2~ubuntu18.04_amd64.deb ...
-Unpacking libxcb1:amd64 (1.13-2~ubuntu18.04) ...
-Selecting previously unselected package libx11-data.
-Preparing to unpack .../10-libx11-data_2%3a1.6.4-3ubuntu0.2_all.deb ...
-Unpacking libx11-data (2:1.6.4-3ubuntu0.2) ...
-Selecting previously unselected package libx11-6:amd64.
-Preparing to unpack .../11-libx11-6_2%3a1.6.4-3ubuntu0.2_amd64.deb ...
-Unpacking libx11-6:amd64 (2:1.6.4-3ubuntu0.2) ...
-Selecting previously unselected package fonts-dejavu-core.
-Preparing to unpack .../12-fonts-dejavu-core_2.37-1_all.deb ...
-Unpacking fonts-dejavu-core (2.37-1) ...
-Selecting previously unselected package fontconfig-config.
-Preparing to unpack .../13-fontconfig-config_2.12.6-0ubuntu2_all.deb ...
-Unpacking fontconfig-config (2.12.6-0ubuntu2) ...
-Selecting previously unselected package libicu64:amd64.
-Preparing to unpack .../14-libicu64_64.2-0.1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking libicu64:amd64 (64.2-0.1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package libxml2:amd64.
-Preparing to unpack .../15-libxml2_2.9.9+dfsg-1+ubuntu18.04.1+deb.sury.org+2_amd64.deb ...
-Unpacking libxml2:amd64 (2.9.9+dfsg-1+ubuntu18.04.1+deb.sury.org+2) ...
-Selecting previously unselected package libcroco3:amd64.
-Preparing to unpack .../16-libcroco3_0.6.12-2_amd64.deb ...
-Unpacking libcroco3:amd64 (0.6.12-2) ...
-Selecting previously unselected package libgomp1:amd64.
-Preparing to unpack .../17-libgomp1_8.3.0-6ubuntu1~18.04.1_amd64.deb ...
-Unpacking libgomp1:amd64 (8.3.0-6ubuntu1~18.04.1) ...
-Selecting previously unselected package gettext.
-Preparing to unpack .../18-gettext_0.19.8.1-6ubuntu0.3_amd64.deb ...
-Unpacking gettext (0.19.8.1-6ubuntu0.3) ...
-Selecting previously unselected package libfreetype6:amd64.
-Preparing to unpack .../19-libfreetype6_2.8.1-2ubuntu2_amd64.deb ...
-Unpacking libfreetype6:amd64 (2.8.1-2ubuntu2) ...
-Selecting previously unselected package libfontconfig1:amd64.
-Preparing to unpack .../20-libfontconfig1_2.12.6-0ubuntu2_amd64.deb ...
-Unpacking libfontconfig1:amd64 (2.12.6-0ubuntu2) ...
-Selecting previously unselected package libjpeg8:amd64.
-Preparing to unpack .../21-libjpeg8_8c-2ubuntu8_amd64.deb ...
-Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...
-Selecting previously unselected package libjbig0:amd64.
-Preparing to unpack .../22-libjbig0_2.1-3.1build1_amd64.deb ...
-Unpacking libjbig0:amd64 (2.1-3.1build1) ...
-Selecting previously unselected package libtiff5:amd64.
-Preparing to unpack .../23-libtiff5_4.0.9-5ubuntu0.3_amd64.deb ...
-Unpacking libtiff5:amd64 (4.0.9-5ubuntu0.3) ...
-Selecting previously unselected package libwebp6:amd64.
-Preparing to unpack .../24-libwebp6_0.6.1-2_amd64.deb ...
-Unpacking libwebp6:amd64 (0.6.1-2) ...
-Selecting previously unselected package libxpm4:amd64.
-Preparing to unpack .../25-libxpm4_1%3a3.5.12-1_amd64.deb ...
-Unpacking libxpm4:amd64 (1:3.5.12-1) ...
-Selecting previously unselected package libgd3:amd64.
-Preparing to unpack .../26-libgd3_2.2.5-5.2+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking libgd3:amd64 (2.2.5-5.2+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package libmaxminddb0:amd64.
-Preparing to unpack .../27-libmaxminddb0_1.3.2-1+ubuntu18.04.1+deb.sury.org+2_amd64.deb ...
-Unpacking libmaxminddb0:amd64 (1.3.2-1+ubuntu18.04.1+deb.sury.org+2) ...
-Selecting previously unselected package nginx-common.
-Preparing to unpack .../28-nginx-common_1.17.5-1+ubuntu18.04.1+deb.sury.org+1_all.deb ...
-Unpacking nginx-common (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package libnginx-mod-http-auth-pam.
-Preparing to unpack .../29-libnginx-mod-http-auth-pam_1.17.5-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking libnginx-mod-http-auth-pam (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package libnginx-mod-http-dav-ext.
-Preparing to unpack .../30-libnginx-mod-http-dav-ext_1.17.5-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking libnginx-mod-http-dav-ext (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package libnginx-mod-http-echo.
-Preparing to unpack .../31-libnginx-mod-http-echo_1.17.5-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking libnginx-mod-http-echo (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package libnginx-mod-http-geoip.
-Preparing to unpack .../32-libnginx-mod-http-geoip_1.17.5-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking libnginx-mod-http-geoip (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package libnginx-mod-http-geoip2.
-Preparing to unpack .../33-libnginx-mod-http-geoip2_1.17.5-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking libnginx-mod-http-geoip2 (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package libnginx-mod-http-image-filter.
-Preparing to unpack .../34-libnginx-mod-http-image-filter_1.17.5-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking libnginx-mod-http-image-filter (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package libnginx-mod-http-subs-filter.
-Preparing to unpack .../35-libnginx-mod-http-subs-filter_1.17.5-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking libnginx-mod-http-subs-filter (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package libnginx-mod-http-upstream-fair.
-Preparing to unpack .../36-libnginx-mod-http-upstream-fair_1.17.5-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking libnginx-mod-http-upstream-fair (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package libxslt1.1:amd64.
-Preparing to unpack .../37-libxslt1.1_1.1.29-5ubuntu0.2_amd64.deb ...
-Unpacking libxslt1.1:amd64 (1.1.29-5ubuntu0.2) ...
-Selecting previously unselected package libnginx-mod-http-xslt-filter.
-Preparing to unpack .../38-libnginx-mod-http-xslt-filter_1.17.5-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking libnginx-mod-http-xslt-filter (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package libnginx-mod-mail.
-Preparing to unpack .../39-libnginx-mod-mail_1.17.5-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking libnginx-mod-mail (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package libnginx-mod-ssl-ct.
-Preparing to unpack .../40-libnginx-mod-ssl-ct_1.17.5-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking libnginx-mod-ssl-ct (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package libnginx-mod-stream.
-Preparing to unpack .../41-libnginx-mod-stream_1.17.5-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking libnginx-mod-stream (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package libpcre2-8-0:amd64.
-Preparing to unpack .../42-libpcre2-8-0_10.34-7+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking libpcre2-8-0:amd64 (10.34-7+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package libsodium23:amd64.
-Preparing to unpack .../43-libsodium23_1.0.18-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking libsodium23:amd64 (1.0.18-1+ubuntu18.04.1+deb.sury.org+1) ...
-Preparing to unpack .../44-libssl1.1_1.1.1d-1+ubuntu18.04.1+deb.sury.org+2_amd64.deb ...
-Unpacking libssl1.1:amd64 (1.1.1d-1+ubuntu18.04.1+deb.sury.org+2) over (1.1.0g-2ubuntu4.1) ...
-Selecting previously unselected package libzip4:amd64.
-Preparing to unpack .../45-libzip4_1.5.1-4+ubuntu18.04.1+deb.sury.org+2_amd64.deb ...
-Unpacking libzip4:amd64 (1.5.1-4+ubuntu18.04.1+deb.sury.org+2) ...
-Selecting previously unselected package nginx-full.
-Preparing to unpack .../46-nginx-full_1.17.5-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking nginx-full (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package nginx.
-Preparing to unpack .../47-nginx_1.17.5-1+ubuntu18.04.1+deb.sury.org+1_all.deb ...
-Unpacking nginx (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package php-common.
-Preparing to unpack .../48-php-common_2%3a71+ubuntu18.04.1+deb.sury.org+1_all.deb ...
-Unpacking php-common (2:71+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package php7.3-common.
-Preparing to unpack .../49-php7.3-common_7.3.13-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking php7.3-common (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package php7.3-bcmath.
-Preparing to unpack .../50-php7.3-bcmath_7.3.13-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking php7.3-bcmath (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package php7.3-json.
-Preparing to unpack .../51-php7.3-json_7.3.13-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking php7.3-json (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package php7.3-opcache.
-Preparing to unpack .../52-php7.3-opcache_7.3.13-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking php7.3-opcache (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package php7.3-readline.
-Preparing to unpack .../53-php7.3-readline_7.3.13-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking php7.3-readline (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package php7.3-cli.
-Preparing to unpack .../54-php7.3-cli_7.3.13-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking php7.3-cli (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package php7.3-curl.
-Preparing to unpack .../55-php7.3-curl_7.3.13-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking php7.3-curl (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package php7.3-fpm.
-Preparing to unpack .../56-php7.3-fpm_7.3.13-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking php7.3-fpm (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package php7.3-gmp.
-Preparing to unpack .../57-php7.3-gmp_7.3.13-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking php7.3-gmp (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package php7.3-mbstring.
-Preparing to unpack .../58-php7.3-mbstring_7.3.13-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking php7.3-mbstring (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package php7.3-sqlite3.
-Preparing to unpack .../59-php7.3-sqlite3_7.3.13-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking php7.3-sqlite3 (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package php7.3-zip.
-Preparing to unpack .../60-php7.3-zip_7.3.13-1+ubuntu18.04.1+deb.sury.org+1_amd64.deb ...
-Unpacking php7.3-zip (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-Selecting previously unselected package unzip.
-Preparing to unpack .../61-unzip_6.0-21ubuntu1_amd64.deb ...
-Unpacking unzip (6.0-21ubuntu1) ...
-Setting up libgomp1:amd64 (8.3.0-6ubuntu1~18.04.1) ...
-Processing triggers for mime-support (3.60ubuntu1) ...
-Setting up libpng16-16:amd64 (1.6.34-1ubuntu0.18.04.2) ...
-Setting up libjbig0:amd64 (2.1-3.1build1) ...
-Setting up fonts-dejavu-core (2.37-1) ...
-Setting up tzdata (2019c-0ubuntu0.18.04) ...
-Configuring tzdata
-------------------
-
-Please select the geographic area in which you live. Subsequent configuration
-questions will narrow this down by presenting a list of cities, representing
-the time zones in which they are located.
-
-  1. Africa      4. Australia  7. Atlantic  10. Pacific  13. Etc
-  2. America     5. Arctic     8. Europe    11. SystemV
-  3. Antarctica  6. Asia       9. Indian    12. US
-Geographic area: 
-Use of uninitialized value $_[1] in join or string at /usr/share/perl5/Debconf/DbDriver/Stack.pm line 111.
-
-Current default time zone: '/UTC'
-Local time is now:      Wed Jan 15 19:09:26 UTC 2020.
-Universal Time is now:  Wed Jan 15 19:09:26 UTC 2020.
-Run 'dpkg-reconfigure tzdata' if you wish to change it.
-
-Use of uninitialized value $val in substitution (s///) at /usr/share/perl5/Debconf/Format/822.pm line 83, <GEN6> line 4.
-Use of uninitialized value $val in concatenation (.) or string at /usr/share/perl5/Debconf/Format/822.pm line 84, <GEN6> line 4.
-Setting up nginx-common (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Setting up libnginx-mod-http-subs-filter (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Setting up unzip (6.0-21ubuntu1) ...
-Setting up gettext-base (0.19.8.1-6ubuntu0.3) ...
-Setting up libjpeg-turbo8:amd64 (1.5.2-0ubuntu5.18.04.3) ...
-Setting up libgeoip1:amd64 (1.6.12-1) ...
-Setting up libfreetype6:amd64 (2.8.1-2ubuntu2) ...
-Setting up libmagic-mgc (1:5.32-2ubuntu0.3) ...
-Setting up libmagic1:amd64 (1:5.32-2ubuntu0.3) ...
-Setting up libargon2-0:amd64 (0~20161029-1.1) ...
-Setting up libsodium23:amd64 (1.0.18-1+ubuntu18.04.1+deb.sury.org+1) ...
-Processing triggers for libc-bin (2.27-3ubuntu1) ...
-Setting up libapparmor1:amd64 (2.12-4ubuntu5.1) ...
-Setting up libssl1.1:amd64 (1.1.1d-1+ubuntu18.04.1+deb.sury.org+2) ...
-Setting up php-common (2:71+ubuntu18.04.1+deb.sury.org+1) ...
-Setting up libnginx-mod-ssl-ct (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Setting up libnginx-mod-http-auth-pam (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Setting up libnginx-mod-mail (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Setting up libnginx-mod-http-upstream-fair (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Setting up libxdmcp6:amd64 (1:1.1.2-3) ...
-Setting up libpcre2-8-0:amd64 (10.34-7+ubuntu18.04.1+deb.sury.org+1) ...
-Setting up libicu64:amd64 (64.2-0.1+ubuntu18.04.1+deb.sury.org+1) ...
-Setting up libnginx-mod-http-geoip (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Setting up libx11-data (2:1.6.4-3ubuntu0.2) ...
-Setting up libmaxminddb0:amd64 (1.3.2-1+ubuntu18.04.1+deb.sury.org+2) ...
-Setting up libxau6:amd64 (1:1.0.8-1) ...
-Setting up libwebp6:amd64 (0.6.1-2) ...
-Setting up libjpeg8:amd64 (8c-2ubuntu8) ...
-Setting up fontconfig-config (2.12.6-0ubuntu2) ...
-Setting up libnginx-mod-stream (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Setting up php7.3-common (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-
-Creating config file /etc/php/7.3/mods-available/calendar.ini with new version
-
-Creating config file /etc/php/7.3/mods-available/ctype.ini with new version
-
-Creating config file /etc/php/7.3/mods-available/exif.ini with new version
-
-Creating config file /etc/php/7.3/mods-available/fileinfo.ini with new version
-
-Creating config file /etc/php/7.3/mods-available/ftp.ini with new version
-
-Creating config file /etc/php/7.3/mods-available/gettext.ini with new version
-
-Creating config file /etc/php/7.3/mods-available/iconv.ini with new version
-
-Creating config file /etc/php/7.3/mods-available/pdo.ini with new version
-
-Creating config file /etc/php/7.3/mods-available/phar.ini with new version
-
-Creating config file /etc/php/7.3/mods-available/posix.ini with new version
-
-Creating config file /etc/php/7.3/mods-available/shmop.ini with new version
-
-Creating config file /etc/php/7.3/mods-available/sockets.ini with new version
-
-Creating config file /etc/php/7.3/mods-available/sysvmsg.ini with new version
-
-Creating config file /etc/php/7.3/mods-available/sysvsem.ini with new version
-
-Creating config file /etc/php/7.3/mods-available/sysvshm.ini with new version
-
-Creating config file /etc/php/7.3/mods-available/tokenizer.ini with new version
-Setting up libnginx-mod-http-echo (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Setting up php7.3-sqlite3 (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-
-Creating config file /etc/php/7.3/mods-available/sqlite3.ini with new version
-
-Creating config file /etc/php/7.3/mods-available/pdo_sqlite.ini with new version
-Setting up libnginx-mod-http-geoip2 (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Setting up libtiff5:amd64 (4.0.9-5ubuntu0.3) ...
-Setting up php7.3-curl (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-
-Creating config file /etc/php/7.3/mods-available/curl.ini with new version
-Setting up libxml2:amd64 (2.9.9+dfsg-1+ubuntu18.04.1+deb.sury.org+2) ...
-Setting up libcroco3:amd64 (0.6.12-2) ...
-Setting up libxslt1.1:amd64 (1.1.29-5ubuntu0.2) ...
-Setting up libzip4:amd64 (1.5.1-4+ubuntu18.04.1+deb.sury.org+2) ...
-Setting up php7.3-opcache (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-
-Creating config file /etc/php/7.3/mods-available/opcache.ini with new version
-Setting up php7.3-bcmath (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-
-Creating config file /etc/php/7.3/mods-available/bcmath.ini with new version
-Setting up libnginx-mod-http-dav-ext (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Setting up libnginx-mod-http-xslt-filter (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Setting up php7.3-readline (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-
-Creating config file /etc/php/7.3/mods-available/readline.ini with new version
-Setting up libxcb1:amd64 (1.13-2~ubuntu18.04) ...
-Setting up php7.3-gmp (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-
-Creating config file /etc/php/7.3/mods-available/gmp.ini with new version
-Setting up libfontconfig1:amd64 (2.12.6-0ubuntu2) ...
-Setting up php7.3-zip (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-
-Creating config file /etc/php/7.3/mods-available/zip.ini with new version
-Setting up php7.3-mbstring (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-
-Creating config file /etc/php/7.3/mods-available/mbstring.ini with new version
-Setting up php7.3-json (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-
-Creating config file /etc/php/7.3/mods-available/json.ini with new version
-Setting up gettext (0.19.8.1-6ubuntu0.3) ...
-Setting up libx11-6:amd64 (2:1.6.4-3ubuntu0.2) ...
-Setting up php7.3-cli (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-update-alternatives: using /usr/bin/php7.3 to provide /usr/bin/php (php) in auto mode
-update-alternatives: warning: skip creation of /usr/share/man/man1/php.1.gz because associated file /usr/share/man/man1/php7.3.1.gz (of link group php) doesn't exist
-update-alternatives: using /usr/bin/phar7.3 to provide /usr/bin/phar (phar) in auto mode
-update-alternatives: warning: skip creation of /usr/share/man/man1/phar.1.gz because associated file /usr/share/man/man1/phar7.3.1.gz (of link group phar) doesn't exist
-update-alternatives: using /usr/bin/phar.phar7.3 to provide /usr/bin/phar.phar (phar.phar) in auto mode
-update-alternatives: warning: skip creation of /usr/share/man/man1/phar.phar.1.gz because associated file /usr/share/man/man1/phar.phar7.3.1.gz (of link group phar.phar) doesn't exist
-
-Creating config file /etc/php/7.3/cli/php.ini with new version
-Setting up libxpm4:amd64 (1:3.5.12-1) ...
-Setting up php7.3-fpm (7.3.13-1+ubuntu18.04.1+deb.sury.org+1) ...
-
-Creating config file /etc/php/7.3/fpm/php.ini with new version
-invoke-rc.d: could not determine current runlevel
-invoke-rc.d: policy-rc.d denied execution of start.
-Setting up libgd3:amd64 (2.2.5-5.2+ubuntu18.04.1+deb.sury.org+1) ...
-Setting up libnginx-mod-http-image-filter (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Setting up nginx-full (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-invoke-rc.d: could not determine current runlevel
-invoke-rc.d: policy-rc.d denied execution of start.
-Setting up nginx (1.17.5-1+ubuntu18.04.1+deb.sury.org+1) ...
-Processing triggers for libc-bin (2.27-3ubuntu1) ...
-Reading package lists...
-Building dependency tree...
-Reading state information...
-0 upgraded, 0 newly installed, 0 to remove and 86 not upgraded.
-Removing intermediate container 9087be2529aa
- ---> ced489a14bbd
+ ---> Using cache
+ ---> 6e4e07599df0
 Step 4/19 : WORKDIR /var/www/html
- ---> Running in e52899516d80
-Removing intermediate container e52899516d80
- ---> 46d8f6555899
+ ---> Using cache
+ ---> 9594aa29ed5d
 Step 5/19 : COPY --chown=www-data --from=composer:1.8.4 /usr/bin/composer /tmp/composer
- ---> bbbc45d81f52
+ ---> Using cache
+ ---> 7cf213321913
 Step 6/19 : COPY composer.json composer.lock ./
- ---> a173d7d510ba
+ ---> Using cache
+ ---> ffd76b5470e6
 Step 7/19 : RUN mkdir -p vendor  && chown www-data:www-data vendor  && COMPOSER_CACHE_DIR=/dev/null setuser www-data /tmp/composer install --no-dev --no-interaction --no-scripts --no-autoloader
- ---> Running in e5d8f984ed44
-[91mLoading composer repositories with package information
-[0m[91mInstalling dependencies from lock file
-[0m[91mPackage operations: 56 installs, 0 updates, 0 removals
-[0m[91m  - Installing doctrine/inflector (v1.3.0): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (35%)[0m[91mDownloading (70%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing doctrine/lexer (v1.0.1): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing erusev/parsedown (1.7.3): [0m[91mDownloading (connecting...)[0m[91m[0m[91mDownloading (0%)           [0m[91m[0m[91mDownloading (95%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing symfony/polyfill-ctype (v1.11.0): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (85%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing vlucas/phpdotenv (v2.6.1): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing symfony/css-selector (v4.2.8): [0m[91mDownloading (connecting...)[0m[91mDownloading (100%)         [0m[91m
-[0m[91m  - Installing tijsverkoyen/css-to-inline-styles (2.2.1): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (40%)[0m[91mDownloading (80%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing symfony/polyfill-mbstring (v1.13.1): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (30%)[0m[91mDownloading (45%)[0m[91mDownloading (75%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing symfony/var-dumper (v3.4.27): [0m[91mDownloading (connecting...)[0m[91mDownloading (100%)         [0m[91m
-[0m[91m  - Installing symfony/routing (v3.4.27): [0m[91mDownloading (connecting...)[0m[91mDownloading (100%)         [0m[91m
-[0m[91m  - Installing symfony/process (v3.4.27): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (5%)[0m[91mDownloading (30%)[0m[91mDownloading (35%)[0m[91mDownloading (40%)[0m[91mDownloading (50%)[0m[91mDownloading (75%)[0m[91mDownloading (80%)[0m[91mDownloading (85%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing paragonie/random_compat (v9.99.99): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (45%)[0m[91m[0m[91mDownloading (90%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing symfony/polyfill-php70 (v1.13.1): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (85%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing symfony/http-foundation (v3.4.36): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (5%)[0m[91mDownloading (10%)[0m[91mDownloading (15%)[0m[91mDownloading (20%)[0m[91mDownloading (25%)[0m[91mDownloading (30%)[0m[91mDownloading (35%)[0m[91mDownloading (40%)[0m[91mDownloading (45%)[0m[91mDownloading (50%)[0m[91mDownloading (55%)[0m[91mDownloading (60%)[0m[91mDownloading (65%)[0m[91mDownloading (70%)[0m[91mDownloading (75%)[0m[91mDownloading (80%)[0m[91mDownloading (85%)[0m[91mDownloading (90%)[0m[91mDownloading (95%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing symfony/contracts (v1.1.0): [0m[91mDownloading (connecting...)[0m[91mDownloading (100%)         [0m[91m
-[0m[91m  - Installing symfony/event-dispatcher (v4.2.8): [0m[91mDownloading (connecting...)[0m[91mDownloading (100%)         
-[0m[91m  - Installing psr/log (1.1.0): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (65%)[0m[91mDownloading (90%)[0m[91m[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing symfony/debug (v3.4.27): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (5%)[0m[91mDownloading (15%)[0m[91mDownloading (20%)[0m[91mDownloading (40%)[0m[91mDownloading (45%)[0m[91mDownloading (50%)[0m[91mDownloading (60%)[0m[91mDownloading (65%)[0m[91mDownloading (80%)[0m[91mDownloading (85%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing symfony/http-kernel (v3.4.27): [0m[91mDownloading (connecting...)[0m[91mDownloading (100%)         [0m[91m
-[0m[91m  - Installing symfony/finder (v3.4.27): [0m[91mDownloading (connecting...)[0m[91mDownloading (100%)         [0m[91m
-[0m[91m  - Installing symfony/console (v3.4.27): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (5%)[0m[91mDownloading (10%)[0m[91mDownloading (15%)[0m[91mDownloading (20%)[0m[91mDownloading (25%)[0m[91mDownloading (30%)[0m[91mDownloading (35%)[0m[91mDownloading (40%)[0m[91mDownloading (45%)[0m[91mDownloading (50%)[0m[91mDownloading (55%)[0m[91mDownloading (60%)[0m[91mDownloading (65%)[0m[91mDownloading (70%)[0m[91mDownloading (75%)[0m[91mDownloading (80%)[0m[91mDownloading (85%)[0m[91mDownloading (90%)[0m[91mDownloading (95%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing symfony/polyfill-php72 (v1.11.0): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (80%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing symfony/polyfill-intl-idn (v1.11.0): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (45%)[0m[91mDownloading (90%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing symfony/polyfill-iconv (v1.11.0): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (5%)[0m[91mDownloading (10%)[0m[91mDownloading (15%)[0m[91mDownloading (20%)[0m[91mDownloading (25%)[0m[91mDownloading (30%)[0m[91mDownloading (35%)[0m[91mDownloading (40%)[0m[91mDownloading (45%)[0m[91mDownloading (50%)[0m[91mDownloading (55%)[0m[91mDownloading (60%)[0m[91mDownloading (65%)[0m[91mDownloading (70%)[0m[91mDownloading (75%)[0m[91mDownloading (80%)[0m[91mDownloading (85%)[0m[91mDownloading (90%)[0m[91mDownloading (95%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing egulias/email-validator (2.1.7): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (25%)[0m[91mDownloading (50%)[0m[91mDownloading (75%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing swiftmailer/swiftmailer (v6.2.1): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (5%)[0m[91mDownloading (10%)[0m[91mDownloading (15%)[0m[91mDownloading (20%)[0m[91mDownloading (25%)[0m[91mDownloading (30%)[0m[91mDownloading (35%)[0m[91m[0m[91mDownloading (40%)[0m[91mDownloading (45%)[0m[91mDownloading (50%)[0m[91mDownloading (55%)[0m[91mDownloading (60%)[0m[91mDownloading (65%)[0m[91mDownloading (70%)[0m[91mDownloading (75%)[0m[91mDownloading (80%)[0m[91m[0m[91mDownloading (85%)[0m[91mDownloading (90%)[0m[91mDownloading (95%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing ramsey/uuid (3.8.0): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (10%)[0m[91mDownloading (15%)[0m[91mDownloading (30%)[0m[91mDownloading (40%)[0m[91mDownloading (50%)[0m[91mDownloading (60%)[0m[91mDownloading (70%)[0m[91mDownloading (80%)[0m[91mDownloading (90%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing psr/simple-cache (1.0.1): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (30%)[0m[91mDownloading (60%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing psr/container (1.0.0): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (75%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing symfony/translation (v4.2.8): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (5%)[0m[91mDownloading (10%)[0m[91mDownloading (15%)[0m[91mDownloading (20%)[0m[91mDownloading (25%)[0m[91mDownloading (30%)[0m[91mDownloading (35%)[0m[91mDownloading (40%)[0m[91mDownloading (45%)[0m[91mDownloading (50%)[0m[91mDownloading (55%)[0m[91mDownloading (60%)[0m[91mDownloading (65%)[0m[91mDownloading (70%)[0m[91mDownloading (75%)[0m[91mDownloading (80%)[0m[91mDownloading (85%)[0m[91mDownloading (90%)[0m[91mDownloading (95%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing nesbot/carbon (1.37.1): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (5%)[0m[91mDownloading (20%)[0m[91mDownloading (25%)[0m[91mDownloading (30%)[0m[91mDownloading (35%)[0m[91mDownloading (40%)[0m[91mDownloading (55%)[0m[91mDownloading (60%)[0m[91mDownloading (65%)[0m[91mDownloading (80%)[0m[91mDownloading (85%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing mtdowling/cron-expression (v1.2.1): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (5%)[0m[91mDownloading (10%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing monolog/monolog (1.24.0): [0m[91mDownloading (connecting...)[0m[91mDownloading (100%)         [0m[91m
-[0m[91m  - Installing league/flysystem (1.0.51): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (15%)[0m[91mDownloading (40%)[0m[91mDownloading (55%)[0m[91mDownloading (65%)[0m[91mDownloading (80%)[0m[91mDownloading (95%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing laravel/framework (v5.5.45): [0m[91mDownloading (connecting...)[0m[91mDownloading (100%)         [0m[91m
-[0m[91m  - Installing fideloper/proxy (3.3.4): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (25%)[0m[91mDownloading (50%)[0m[91mDownloading (75%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing ralouphie/getallheaders (2.0.5): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (55%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing psr/http-message (1.0.1): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (65%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing guzzlehttp/psr7 (1.5.2): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (5%)[0m[91mDownloading (10%)[0m[91mDownloading (15%)[0m[91mDownloading (70%)[0m[91mDownloading (75%)[0m[91mDownloading (80%)[0m[91mDownloading (85%)[0m[91mDownloading (90%)[0m[91mDownloading (95%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing guzzlehttp/promises (v1.3.1): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (30%)[0m[91mDownloading (40%)[0m[91mDownloading (65%)[0m[91mDownloading (95%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing guzzlehttp/guzzle (6.3.3): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (5%)[0m[91mDownloading (15%)[0m[91mDownloading (20%)[0m[91mDownloading (30%)[0m[91mDownloading (35%)[0m[91mDownloading (45%)[0m[91mDownloading (55%)[0m[91mDownloading (60%)[0m[91m[0m[91mDownloading (65%)[0m[91mDownloading (75%)[0m[91mDownloading (80%)[0m[91mDownloading (90%)[0m[91mDownloading (95%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing gocardless/gocardless-pro (1.7.0): [0m[91mDownloading (connecting...)[0m[91mDownloading (100%)         [0m[91m
-[0m[91m  - Installing jakub-onderka/php-console-color (v0.2): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (50%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing nikic/php-parser (v4.2.1): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (5%)[0m[91mDownloading (10%)[0m[91mDownloading (15%)[0m[91mDownloading (20%)[0m[91mDownloading (25%)[0m[91mDownloading (30%)[0m[91mDownloading (35%)[0m[91mDownloading (40%)[0m[91mDownloading (45%)[0m[91mDownloading (50%)[0m[91mDownloading (55%)[0m[91mDownloading (60%)[0m[91mDownloading (65%)[0m[91mDownloading (70%)[0m[91mDownloading (75%)[0m[91mDownloading (80%)[0m[91mDownloading (85%)[0m[91mDownloading (90%)[0m[91mDownloading (95%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing jakub-onderka/php-console-highlighter (v0.4): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (15%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing dnoegel/php-xdg-base-dir (0.1): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing psy/psysh (v0.9.9): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (5%)[0m[91mDownloading (10%)[0m[91mDownloading (15%)[0m[91mDownloading (20%)[0m[91mDownloading (25%)[0m[91mDownloading (30%)[0m[91mDownloading (35%)[0m[91mDownloading (40%)[0m[91mDownloading (45%)[0m[91mDownloading (50%)[0m[91mDownloading (55%)[0m[91mDownloading (60%)[0m[91mDownloading (65%)[0m[91mDownloading (70%)[0m[91mDownloading (75%)[0m[91mDownloading (80%)[0m[91mDownloading (85%)[0m[91mDownloading (90%)[0m[91mDownloading (95%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing laravel/tinker (v1.0.8): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing laravelcollective/html (v5.5.4): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (45%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing tedivm/jshrink (v1.0.1): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (20%)[0m[91mDownloading (35%)[0m[91mDownloading (60%)[0m[91mDownloading (90%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing mariuzzo/laravel-js-localization (dev-master 1ad478d): [0m[91mDownloading (connecting...)[0m[91mDownloading (100%)         [0m[91m
-[0m[91m  - Installing paypal/rest-api-sdk-php (1.14.0): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (5%)[0m[91mDownloading (10%)[0m[91mDownloading (15%)[0m[91mDownloading (20%)[0m[91mDownloading (25%)[0m[91mDownloading (30%)[0m[91mDownloading (35%)[0m[91mDownloading (40%)[0m[91mDownloading (45%)[0m[91mDownloading (50%)[0m[91mDownloading (55%)[0m[91mDownloading (60%)[0m[91mDownloading (65%)[0m[91mDownloading (70%)[0m[91mDownloading (75%)[0m[91mDownloading (80%)[0m[91mDownloading (85%)[0m[91mDownloading (90%)[0m[91mDownloading (95%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing predis/predis (v1.1.1): [0m[91mDownloading (connecting...)[0m[91mDownloading (0%)           [0m[91mDownloading (5%)[0m[91mDownloading (10%)[0m[91mDownloading (15%)[0m[91mDownloading (20%)[0m[91mDownloading (25%)[0m[91mDownloading (30%)[0m[91mDownloading (35%)[0m[91mDownloading (40%)[0m[91mDownloading (45%)[0m[91mDownloading (50%)[0m[91m[0m[91mDownloading (55%)[0m[91mDownloading (60%)[0m[91mDownloading (65%)[0m[91mDownloading (70%)[0m[91mDownloading (75%)[0m[91mDownloading (80%)[0m[91mDownloading (85%)[0m[91mDownloading (90%)[0m[91mDownloading (95%)[0m[91mDownloading (100%)[0m[91m
-[0m[91m  - Installing proengsoft/laravel-jsvalidation (v1.6.1): [0m[91mDownloading (connecting...)[0m[91mDownloading (100%)         [0m[91m
-[0m[91m  - Installing inacho/php-credit-card-validator (1.0.2): [0m[91mDownloading (connecting...)[0m[91mDownloading (100%)         [0m[91m
-[0m[91m  - Installing sonarsoftware/customer_portal_framework (1.0.15): [0m[91mDownloading (connecting...)[0m[91mDownloading (100%)         [0m[91m
-[0mRemoving intermediate container e5d8f984ed44
- ---> 001b93895e2d
+ ---> Using cache
+ ---> d3c16ea771ec
 Step 8/19 : COPY --chown=www-data . .
- ---> 9fe018eac42b
+ ---> Using cache
+ ---> 5f0f17374a46
 Step 9/19 : RUN COMPOSER_CACHE_DIR=/dev/null setuser www-data /tmp/composer install --no-dev --no-interaction --no-scripts --classmap-authoritative  && rm -rf /tmp/composer
- ---> Running in 6e761e96713e
-[91mLoading composer repositories with package information
-[0m[91mInstalling dependencies from lock file
-[0m[91mNothing to install or update
-[0m[91mGenerating optimized autoload files
-[0mRemoving intermediate container 6e761e96713e
- ---> 4b1909f3c764
+ ---> Using cache
+ ---> 00cf0ab82683
 Step 10/19 : COPY deploy/conf/php-fpm/ /etc/php/7.3/fpm/
- ---> 75ae357aec1d
+ ---> Using cache
+ ---> 40ae7ff82a54
 Step 11/19 : COPY deploy/conf/cron.d/* /etc/cron.d/
- ---> fc6466fe8da0
+ ---> Using cache
+ ---> ebad7e7ae188
 Step 12/19 : RUN mkdir -p /etc/my_init.d
- ---> Running in 8ed6430bb98a
-Removing intermediate container 8ed6430bb98a
- ---> 12a0490821c5
+ ---> Using cache
+ ---> 1730ea516f50
 Step 13/19 : COPY deploy/*.sh /etc/my_init.d/
- ---> 9a2c37573213
+ ---> Using cache
+ ---> 2ab30f29df2a
 Step 14/19 : RUN mkdir /etc/service/php-fpm
- ---> Running in 2126bae152d7
-Removing intermediate container 2126bae152d7
- ---> 6940c5c6a312
+ ---> Using cache
+ ---> 4ffb5c16c5f2
 Step 15/19 : COPY deploy/services/php-fpm.sh /etc/service/php-fpm/run
- ---> 81c166822c9d
+ ---> Using cache
+ ---> beeb0d93e764
 Step 16/19 : RUN mkdir /etc/service/nginx
- ---> Running in 4714a0a1420b
-Removing intermediate container 4714a0a1420b
- ---> a2a7de59eb18
+ ---> Using cache
+ ---> ada72bdf8a2a
 Step 17/19 : COPY deploy/services/nginx.sh /etc/service/nginx/run
- ---> 235b4ffb0b7f
+ ---> Using cache
+ ---> 0bf2c73dfe7b
 Step 18/19 : VOLUME ['/var/www/html/storage']
- ---> Running in 807cf3a6c166
-Removing intermediate container 807cf3a6c166
- ---> ec2aeae39a69
+ ---> Using cache
+ ---> 0da0fa1d33ed
 Step 19/19 : EXPOSE 80 443
- ---> Running in a949f5d55e7d
-Removing intermediate container a949f5d55e7d
- ---> 303d7757fdca
+ ---> Using cache
+ ---> 251cc25c8128
 
-Successfully built 303d7757fdca
+Successfully built 251cc25c8128
 Successfully tagged customer_portal_app:latest
-### The app key is: base64:GhFMu+PPz4Wtrpj9Q+BLwk3c+dhuATw2gyA7jii5B1k=
+### The app key is: base64:bBnfIfWzQNHWiUh8cStflT52LYBBgIO7v40Kt/AB56k=
 ### Back this up somewhere in case you need it.
 Migration table created successfully.
 Migrating: 2016_05_18_161648_create_creation_tokens_table
@@ -883,5 +95,5 @@ Cache cleared successfully.
 Compiled views cleared!
 Configuration cache cleared!
 Configuration cached successfully!
-Settings key is Wlb72RN0O5VXqLhijwKWPa9iWL2Piylv
-### Navigate to https://localhost/settings and use the above settings key configure your portal.
+Settings key is 7IgF5dNw1WW7QczLPBz1iSnroAlcDaWx
+### Navigate to https://infusion.network/settings and use the above settings key configure your portal.
