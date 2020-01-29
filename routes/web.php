@@ -19,6 +19,10 @@ Route::get("/settings/subdivisions/{country}", "SubdivisionController@authentica
 Route::post("/settings", "AppConfigController@save");
 Route::post("/settings/auth", "AppConfigController@authenticate");
 
+
+
+
+
 Route::group(['middleware' => ['language']], function () {
     Route::group(['middleware' => ['web','guest']], function () {
         //Unauthenticated routes
@@ -106,6 +110,7 @@ Route::group(['middleware' => ['language']], function () {
          */
  	Route::group(['prefix' => 'devices', 'middleware' => ['devices']], function () {
             Route::get("/", "DeviceController@index");
+            Route::get("/get-device/{id}", "DeviceController@get_device_data");
            // Route::get("/{contracts}", "ContractController@downloadContractPdf");
         });
     });
