@@ -50,17 +50,5 @@ class DeviceController extends Controller
         return Cache::tags("profile.details")->get(get_user()->contact_id);
     }
 
-    /**
-     * @param $id
-     * @return \Illuminate\Http\Response
-     */
-    public function downloadContractPdf($id)
-    {
-        $base64 = $this->apiController->getSignedContractAsBase64(get_user()->account_id, $id);
-
-        return response()->make(base64_decode($base64), 200, [
-            'Content-Type' => 'application/pdf',
-            'Content-Disposition' => "attachment; filename=contract.pdf",
-        ]);
-    }
+  
 }

@@ -62,10 +62,10 @@ class Devices extends Model
         return $datafull->data;
 
 
-        //  echo "<pre>";
-        //  print_r($datafull12);
-        //  echo "</pre>";
-        //  die;
+         // echo "<pre>";
+         // print_r($datafull);
+         // echo "</pre>";
+         // die;
     }
 
 

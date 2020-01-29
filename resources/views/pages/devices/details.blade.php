@@ -169,49 +169,58 @@
                         @if(isset($contract->is_overall_up)) 
 
                               @if($contract->is_overall_up == '1')  
-                                 @php (@$is_online = 'true')  <img src="/assets/online.png" width="20"> 
+                                    @php (@$is_online = 'true')  
+                                    <img src="/assets/online.png" width="20"> 
                               @else 
                                     <img src="/assets/offline.png" width="20"> 
                               @endif
 
                         @else 
-                        <img src="/assets/offline.png" width="20"> 
+                            <img src="/assets/offline.png" width="20"> 
                         @endif
                            {{ $contract->status }}
                      @endif
                   </TD>
                   <TD>@if(isset($contract->ip)  && $is_online == 'true') {{ $contract->ip }}  @endif</TD>
                   <TD>@if(isset($contract->signal_bar) && $is_online == 'true') 
+
                       <ul id="signal-strength">
-                       @if($contract->signal_bar == '0')  
+                         @if($contract->signal_bar == '0')  
+                          <li class="weak-weak"></li>  
+                          <li class="very-weak"></li>
+                          <li class="weak"></li>
+                          <li class="strong"></li>
+                          <li class="pretty-strong"></li>
+                         @endif 
+                       @if($contract->signal_bar == '1')  
                           <li class="weak-weak"><div id="weak-weak"></div></li>  
                           <li class="very-weak"></li>
                           <li class="weak"></li>
                           <li class="strong"></li>
                           <li class="pretty-strong"></li>
                          @endif 
-                        @if($contract->signal_bar == '1')  
+                        @if($contract->signal_bar == '2')  
                             <li class="weak-weak"><div id="weak-weak"></div></li>  
                             <li class="very-weak"><div id="very-weak"></div></li>
                             <li class="weak"></li>
                             <li class="strong"></li>
                             <li class="pretty-strong"></li>
                         @endif 
-                        @if($contract->signal_bar == '2')  
+                        @if($contract->signal_bar == '3')  
                             <li class="weak-weak"><div id="weak-weak"></div></li>  
                             <li class="very-weak"><div id="very-weak"></div></li>
                             <li class="weak"><div id="weak"></div></li>
                             <li class="strong"></li>
                             <li class="pretty-strong"></li>
                         @endif 
-                        @if($contract->signal_bar == '3')  
+                        @if($contract->signal_bar == '4')  
                                <li class="weak-weak"><div id="weak-weak"></div></li>  
                                <li class="very-weak"><div id="very-weak"></div></li>
                                <li class="weak"><div id="weak"></div></li>
                                <li class="strong"><div id="strong"></div></li>
                                <li class="pretty-strong"></li>
                         @endif 
-                        @if($contract->signal_bar == '4')  
+                        @if($contract->signal_bar == '5')  
                                <li class="weak-weak"><div id="weak-weak"></div></li>  
                                <li class="very-weak"><div id="very-weak"></div></li>
                                <li class="weak"><div id="weak"></div></li>
