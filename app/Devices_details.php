@@ -22,7 +22,7 @@ class Devices_details extends Model
        
         //////////////////////////////////////////
         $ch1 = curl_init();
-        curl_setopt($ch1, CURLOPT_URL, "https://infusion.sonar.software/api/v1/entity_custom_fields/account/".$contact->getAccountID());
+        curl_setopt($ch1, CURLOPT_URL, "https://infusion.sonar.software/api/v1/entity_custom_fields/account/".$contact->getAccountID()."/1");
         curl_setopt($ch1, CURLOPT_SSL_VERIFYPEER, FALSE);
         curl_setopt($ch1, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch1, CURLOPT_USERPWD,"portaluser:K#swick3!");
@@ -31,11 +31,22 @@ class Devices_details extends Model
         curl_close($ch1);
         $response['withcode'] = json_decode($output);
 
+        //////////////////////////////////////////
+        $chid = curl_init();
+        curl_setopt($chid, CURLOPT_URL, "https://infusion.sonar.software/api/v1/entity_custom_fields/account/".$contact->getAccountID()."/2");
+        curl_setopt($chid, CURLOPT_SSL_VERIFYPEER, FALSE);
+        curl_setopt($chid, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($chid, CURLOPT_USERPWD,"portaluser:K#swick3!");
+
+        $outputid = curl_exec($chid);
+        curl_close($chid);
+        $response_id['withcode'] = json_decode($outputid);
+
        ///////////////////////////////////////////
 
         $headers_auth[] = 'Authorization: Bearer ' . $access->access_token;
         $ch10 = curl_init();
-        curl_setopt($ch10, CURLOPT_URL, 'https://api.ic.peplink.com/rest/o/'.$response['withcode']->data[1]->data.'/g/'.$response['withcode']->data[0]->data.'/d/'.$device_id);
+        curl_setopt($ch10, CURLOPT_URL, 'https://api.ic.peplink.com/rest/o/'.$response['withcode']->data->data.'/g/'.$response_id['withcode']->data->data.'/d/'.$device_id);
         curl_setopt($ch10, CURLOPT_HTTPHEADER, $headers_auth);
         curl_setopt($ch10, CURLOPT_HEADER, 0);
         curl_setopt($ch10, CURLOPT_CUSTOMREQUEST, "GET"); 
@@ -46,7 +57,7 @@ class Devices_details extends Model
 
 
          // echo "<pre>";
-         // print_r($datafull12);
+         // print_r($datafull12->data);
          // echo "</pre>";
          // die;
         return $datafull12->data;

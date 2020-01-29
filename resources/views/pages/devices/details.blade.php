@@ -83,8 +83,12 @@
                </tr>
                 <tr>
                   <th scope="row">{{utrans("devices.status")}}</th>
-                  <td style="text-transform: uppercase;"> @if(isset($devices->status))
-                        @if($devices->status == 'offline') <img src="/assets/offline.png" width="20"> @else <img src="/assets/online.png" width="20"> @endif
+                  <td style="text-transform: uppercase;"> 
+
+                        @php (@$is_uptime_online = 'false') 
+
+                        @if(isset($devices->status))
+                        @if($devices->status == 'offline') @php (@$is_uptime_online = 'true')  <img src="/assets/offline.png" width="20"> @else <img src="/assets/online.png" width="20"> @endif
                            {{ $devices->status }}
                         @endif
                   </td>
@@ -104,7 +108,7 @@
                 <tr>
                   <th scope="row">Uptime</th>
                   <td>
-                        @if(isset($devices->uptime))   
+                        @if(isset($devices->uptime) && $is_uptime_online = 'true')   
                            @php (@$ss = $devices->uptime)
                            @php (@$m = floor(($ss % 3600)/60))
                            @php ($h = floor(($ss % 86400)/3600))
@@ -147,19 +151,39 @@
            
             <tbody>
                @foreach($devices->interfaces as $contract)
-               @if($contract->status != 'Disabled')  
+                @if(strpos( $contract->name, '(p)' ) !== false)
                <tr>    
-                  <TD>@if(isset($contract->name)) {{ $contract->name }}  @endif</TD>
+                  <TD>@if(isset($contract->name))
+                    @php (@$name = str_replace("(p)","",$contract->name))    
+                   {{ $name }}  
+
+                  @endif</TD>
                   <TD style="text-transform: uppercase;">
-                     @if(isset($contract->status) && $contract->status != 'Disabled (Activation Required)')
-                        @if($contract->status == 'Disconnected' || $contract->status == 'No Cable Detected' || $contract->status == 'No SIM Card Detected') <img src="/assets/offline.png" width="20"> @else <img src="/assets/online.png" width="20"> @endif
+                     <!-- && $contract->status != 'Disabled (Activation Required)' -->
+                     @if(isset($contract->status))
+
+                        @php (@$is_online = 'false')
+
+                        
+
+                        @if(isset($contract->is_overall_up)) 
+
+                              @if($contract->is_overall_up == '1')  
+                                 @php (@$is_online = 'true')  <img src="/assets/online.png" width="20"> 
+                              @else 
+                                    <img src="/assets/offline.png" width="20"> 
+                              @endif
+
+                        @else 
+                        <img src="/assets/offline.png" width="20"> 
+                        @endif
                            {{ $contract->status }}
                      @endif
                   </TD>
-                  <TD>@if(isset($contract->ip)) {{ $contract->ip }}  @endif</TD>
-                  <TD>@if(isset($contract->signal_bar)) 
+                  <TD>@if(isset($contract->ip)  && $is_online == 'true') {{ $contract->ip }}  @endif</TD>
+                  <TD>@if(isset($contract->signal_bar) && $is_online == 'true') 
                       <ul id="signal-strength">
-                        @if($contract->signal_bar == '0')  
+                       @if($contract->signal_bar == '0')  
                           <li class="weak-weak"><div id="weak-weak"></div></li>  
                           <li class="very-weak"></li>
                           <li class="weak"></li>
@@ -197,11 +221,11 @@
                      </ul>
                   @endif
                   </TD>
-                  <TD>@if(isset($contract->signal)) {{ $contract->signal }}  @endif</TD>
-                  <TD>@if(isset($contract->signal_quality)) {{ $contract->signal_quality }}  @endif</TD>
+                  <TD>@if(isset($contract->signal) && $is_online == 'true' ) {{ $contract->signal }} dBm  @endif</TD>
+                  <TD>@if(isset($contract->signal_quality) && $is_online == 'true') {{ $contract->signal_quality }} dB @endif</TD>
                   <TD></TD>
                </tr>
-               @endif
+                @endif
                @endforeach
             </tbody>
          </table>
