@@ -20,7 +20,7 @@
             </div>
          </div>
       </div>
-      <div class="collapse navbar-collapse" id="sidebarCollapse">
+      <div class="collapse navbar-collapse " id="sidebarCollapse">
          <!-- Customer Portal Sidebar-->
          <!-- Heading -->
          <h6 class="navbar-heading text-muted mt-4">
@@ -50,10 +50,26 @@
             </li>
             @endif
             @if(Config::get("customer_portal.devices_enabled") === true)
-              <li class="nav-item">
-               <a @if(str_contains(Route::getCurrentRoute()->uri(),"devices")) class="nav-link selected" @else class="nav-link" @endif href="{{action("DeviceController@index")}}">
-               <i class="fe fe-package"></i> {{utrans("nav.devices")}}</a>
-            </li>
+              <li class="nav-item ">
+                     <a style="display: inline"  @if(str_contains(Route::getCurrentRoute()->uri(),"devices")) class="nav-link selected" @else class="nav-link" @endif href="{{action("DeviceController@index")}}">
+                        <i class="fe fe-package"></i> {{utrans("nav.devices")}}
+                        <a class="collapsed" onclick="change_plus_mins()" data-toggle="collapse" data-target="#collapseTwo" >
+                           <i style="color:white; padding-left: 75px;" id="iconof" class="fa fa-plus"></i></a>
+                     </a>
+
+                     <div style="margin-left: 16px;"  id="collapseTwo" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                       
+                              <a href="/portal/devices/report/0/0" @if(str_contains(Route::getCurrentRoute()->uri(),"devices/report/0/0")) class="nav-link selected" @else class="nav-link" @endif href="{{action("DeviceController@index")}}">
+                                  <i class="fe fe-printer "></i> 
+                              Reports</a>
+                       
+                     </div>
+
+                    
+               </li>
+             
+
+                           
              @endif
          </ul>
          <h6 class="navbar-heading text-muted mt-4">

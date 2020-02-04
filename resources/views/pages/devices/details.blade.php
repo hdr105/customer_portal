@@ -38,6 +38,7 @@
 
 
 </style>
+
 <div class="container-fluid">
 <div class="row justify-content-center">
 <div class="col-12">
@@ -48,11 +49,11 @@
             <div class="col">
                <!-- Pretitle -->
                <h6 class="header-pretitle">
-               {{utrans("headers.summary")}}
+                  <a href="javascript:history.go(-1)">Back to Devices</a>
                </h6>
                <!-- Title -->
                <h1 class="header-title">
-               {{utrans("headers.devices")}}
+               {{ $devices->name }}
                </h1>
             </div>
             <div class="col-auto">
@@ -66,10 +67,10 @@
    <div class="card mt-4">
       <div class="card-header">
          <h4 class="card-title text-muted mt-3">
-            {{utrans("headers.devices")}} Detail
+            Device Details
          </h4>
       </div>
-
+      <?php  ?>
       <div class="table-responsive">
          <table class="table card-table">
             <thead>
@@ -133,7 +134,6 @@
             Interface Status
          </h4>
       </div>
-
       <div class="table-responsive">
          <table class="table card-table">
             <thead>
@@ -145,13 +145,14 @@
                   <th>Signal Strength</th> 
                   <th>Signal Quality</th> 
                   <th>Monthly | Usage</th> 
- 
+                  <th>Action</th> 
                </tr>
             </thead>
            
             <tbody>
                @foreach($devices->interfaces as $contract)
                 @if(strpos( $contract->name, '(p)' ) !== false)
+                 @php (@$is_online = 'false')
                <tr>    
                   <TD>@if(isset($contract->name))
                     @php (@$name = str_replace("(p)","",$contract->name))    
@@ -161,11 +162,6 @@
                   <TD style="text-transform: uppercase;">
                      <!-- && $contract->status != 'Disabled (Activation Required)' -->
                      @if(isset($contract->status))
-
-                        @php (@$is_online = 'false')
-
-                        
-
                         @if(isset($contract->is_overall_up)) 
 
                               @if($contract->is_overall_up == '1')  
@@ -233,6 +229,11 @@
                   <TD>@if(isset($contract->signal) && $is_online == 'true' ) {{ $contract->signal }} dBm  @endif</TD>
                   <TD>@if(isset($contract->signal_quality) && $is_online == 'true') {{ $contract->signal_quality }} dB @endif</TD>
                   <TD></TD>
+                  <TD>
+                     @if($is_online == 'true')
+                        <a href="/portal/devices/report/{{ $devices->id }}/{{ $contract->id }}">View Report</a>
+                     @endif
+                   </TD>
                </tr>
                 @endif
                @endforeach
@@ -240,7 +241,6 @@
          </table>
       </div>
    </div>
-
-
 </div>
+
 @endsection

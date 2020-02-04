@@ -14,7 +14,7 @@
                </h6>
                <!-- Title -->
                <h1 class="header-title">
-               {{utrans("headers.devices")}}
+               SD-WAN Devices
                </h1>
             </div>
             <div class="col-auto">

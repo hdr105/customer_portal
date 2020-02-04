@@ -39,6 +39,60 @@ class DeviceController extends Controller
         $devices  = $data_devices->curl_request_details($contact,$device_id);
         return view("pages.devices.details", compact('devices'));
     }
+    public function report_view($device_id,$report_id){
+        $user = get_user();
+        $contact = $this->getContact();
+        
+        $data_devices = new Devices();
+        $devices  = $data_devices->curl_request_fun($contact);
+        return view("pages.devices.report", compact('devices'));
+    }
+
+    public function get_interfaces(){
+        
+        $device_id = $_POST['device_id'];
+        $user = get_user();
+        $contact = $this->getContact();
+
+        $data_devices = new Devices();
+        $devices  = $data_devices->curl_request_details($contact,$device_id);
+        $view = view("pages.devices.interface_select", compact('devices'));
+        echo $view;
+        die;
+    }
+
+
+    public function get_report_data()
+    {
+
+        $user = get_user();
+        $contact = $this->getContact();
+
+        $data_devices = new Devices();
+        
+        $devices  = $data_devices->curl_report_details($contact);
+
+        $view = view("pages.devices.table",['devices' => $devices]);
+        echo $view;
+        die;
+    }
+
+    public function get_csv_data()
+    {   
+        $device_id = $_GET['device_id'];
+        $filter_radio = $_GET['filter_radio'];
+        $interface_selected = $_GET['interface_selected'];
+        $stard_date = $_GET['stard_date'];
+        $end_date = $_GET['end_date'];
+
+        $user = get_user();
+        $contact = $this->getContact();
+       
+        
+        $data_devices = new Devices();
+        $devices  = $data_devices->curl_csv_details($device_id,$filter_radio,$interface_selected,$stard_date,$end_date,$contact);
+        die;
+    }
 
      private function getContact()
     {
