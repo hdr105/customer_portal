@@ -77,7 +77,10 @@ var options = {
    animationEnabled: true,
   
    title:{
-      text: nameofcolum + " Usage"
+      text: nameofcolum + " Usage",
+      fontWeight: "bold",
+      fontSize: 26,
+      fontColor: "black",
    },
    subtitles: [{
       text: ""
@@ -105,7 +108,7 @@ var options = {
    },
    data: [{
       type: "spline",
-      name: "Donwload",
+      name: "Download",
       showInLegend: true,
       xValueFormatString: "MMM YYYY",
       yValueFormatString: "#,###.##",

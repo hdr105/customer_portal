@@ -50,7 +50,17 @@
             </li>
             @endif
             @if(Config::get("customer_portal.devices_enabled") === true)
-              <li class="nav-item ">
+            <li class="nav-item ">
+                     <a  @if(str_contains(Route::getCurrentRoute()->uri(),"devices")) class="nav-link selected" @else class="nav-link" @endif href="{{action("DeviceController@index")}}">
+                        <i class="fe fe-package"></i> {{utrans("nav.devices")}}
+                     </a>
+            </li>
+            <li class="nav-item ">
+               <a href="/portal/devices/report/0/0" @if(str_contains(Route::getCurrentRoute()->uri(),"devices/report/0/0")) class="nav-link selected" @else class="nav-link" @endif href="{{action("DeviceController@index")}}">
+                          <i class="fe fe-printer "></i> 
+               Reports</a>
+            </li>
+             <!--  <li class="nav-item ">
                      <a style="display: inline"  @if(str_contains(Route::getCurrentRoute()->uri(),"devices")) class="nav-link selected" @else class="nav-link" @endif href="{{action("DeviceController@index")}}">
                         <i class="fe fe-package"></i> {{utrans("nav.devices")}}
                         <a class="collapsed" onclick="change_plus_mins()" data-toggle="collapse" data-target="#collapseTwo" >
@@ -66,7 +76,7 @@
                      </div>
 
                     
-               </li>
+               </li> -->
              
 
                            

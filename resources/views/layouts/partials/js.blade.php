@@ -18,15 +18,32 @@ close=document.getElementById("close");close.addEventListener('click',function()
 <script src="/assets/libs/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
 <script src="/assets/libs/jquery-payment-plugin/jquery.payment.min.js"></script>
 <script src="/assets/libs/moment/moment.min.js"></script>
+
 <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
 <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
 
 
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 
 <script>
+
+
    moment.locale('{{Config::get("app.locale")}}');
    $(document).ready(function(){
-   $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});$(".languageSelector").change(function(){var language = $(this).val();$.ajax("/language",{data: {language: language},dataType: 'json',type: 'POST'}).then(function() {setTimeout(function(){location.reload();}, 100);});});});
+
+
+     $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});$(".languageSelector").change(function(){var language = $(this).val();$.ajax("/language",{data: {language: language},dataType: 'json',type: 'POST'}).then(function() {setTimeout(function(){location.reload();}, 100);});});
+
+
+ });
+
+  $(function(){
+    $("#stard_date").datepicker({ dateFormat: 'yy-mm-dd' });
+    $("#end_date").datepicker({ dateFormat: 'yy-mm-dd' });
+  });
+
+
    Number.prototype.formatCurrency = function(c){
        var n = this,
            c = isNaN(c = Math.abs(c)) ? 2 : c,
@@ -137,13 +154,15 @@ var options = {
 
 
     
- function change_plus_mins(){
-      if ($("#iconof").hasClass( "fa-plus" ) ) {
-        $('#iconof').removeClass('fa-plus').addClass('fa-minus');
-      }else{
-        $('#iconof').removeClass('fa-minus').addClass('fa-plus');
-      }
- }
+ // function change_plus_mins(){
+ //      if ($("#iconof").hasClass( "fa-plus" ) ) {
+ //        $('#iconof').removeClass('fa-plus').addClass('fa-minus');
+ //      }else{
+ //        $('#iconof').removeClass('fa-minus').addClass('fa-plus');
+ //      }
+ // }
+
+
 
 
 </script>

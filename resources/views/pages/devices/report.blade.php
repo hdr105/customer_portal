@@ -7,6 +7,7 @@
 
    if($('input[name="filter_radio"]:checked').val() == 'hourly'){
       $("#end_date").attr("disabled", true);
+      $("#end_date").val('');
    }else{
        $("#end_date").attr("disabled", false);
    }
@@ -216,7 +217,7 @@
                   @endforeach
                </select>
              </div>
-              <label for="staticEmail" class="col-sm-1 col-form-label">Connection:</label>
+              <label for="staticEmail" class="col-sm-1 col-form-label">Interface:</label>
              <div class="col-sm-3">
 
                <select class="form-control" id="interface_select" >
@@ -232,13 +233,14 @@
            <div class="form-group row">
              <label for="staticEmail" class="col-sm-1 col-form-label">Start Date:</label>
              <div class="col-sm-3">
-              <input type="date" name="startDate" class="form-control" id="stard_date">
+
+              <input type="text" name="startDate"  placeholder="YYYY-MM-DD" class="form-control" value="<?php echo date("Y-m-d") ?>" id="stard_date">
              </div>
            </div>
            <div class="form-group row">
              <label for="staticEmail" class="col-sm-1 col-form-label">End Date:</label>
              <div class="col-sm-3">
-               <input type="date" name="endDate" class="form-control" id="end_date">
+               <input type="text" placeholder="YYYY-MM-DD" name="endDate" class="form-control" id="end_date">
                <div id="datevalidation" style="color:red; font-size:13px">&nbsp;</div>
              </div>
            </div>

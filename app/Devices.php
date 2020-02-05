@@ -101,7 +101,7 @@ class Devices extends Model
         
         
         $headers[] = 'Authorization: Bearer ' . $this->acces_token();
-
+      
         $ch9 = curl_init();
         curl_setopt($ch9, CURLOPT_URL, 'https://api.ic.peplink.com/rest/o/'.$this->get_organization_id($contact).'/g/'.$this->get_group_id($contact).'/d/'.$_POST['device_id'].'/bandwidth?type='.$_POST['filter_radio'].'&start='.$_POST['stard_date'].'&end='.$_POST['end_date'].'&wan_id='.$_POST['interface_selected'].'&include_details=true');
         curl_setopt($ch9, CURLOPT_HTTPHEADER, $headers);
