@@ -50,34 +50,35 @@
                   </TR>
                @endif
                <?php //echo "<pre>"; print_r($devices) ?>
-               @foreach($devices as $contract)
-               <tr >       
+               @if(isset($devices))
+                  @foreach($devices as $contract)
+                  <tr >       
+                              
+                              @php (@$ss = $contract->uptime)
+                              @php (@$m = floor(($ss % 3600)/60))
+
+                              @php ($h = floor(($ss % 86400)/3600))
+
+                              @php ($d = floor(($ss % 2592000)/86400))
+
+                             
                            
-                           @php (@$ss = $contract->uptime)
-                           @php (@$m = floor(($ss % 3600)/60))
+                        <TD><a href="devices/get-device/{{ $contract->id }}">{{ $contract->name }}</a></TD>
+                        <TD style="text-transform: uppercase;">@if($contract->status == 'offline') <img src="/assets/offline.png" width="20"> @else <img src="/assets/online.png" width="20"> @endif
+                           {{ $contract->status }}</TD>
+                        <TD>{{ $contract->sn }}</TD>
+                        <TD>@if($contract->status != 'offline') @if(isset($contract->uptime))  @if($d != 0) {{  $d.' Days,'}} @endif 
+                           @if($h != 0) {{  $h.' Hours,'}} @endif 
+                           @if($m != 0) {{  $m.' Minutes'}} @endif 
 
-                           @php ($h = floor(($ss % 86400)/3600))
 
-                           @php ($d = floor(($ss % 2592000)/86400))
-
+                         @endif @endif
                           
-                        
-                     <TD><a href="devices/get-device/{{ $contract->id }}">{{ $contract->name }}</a></TD>
-                     <TD style="text-transform: uppercase;">@if($contract->status == 'offline') <img src="/assets/offline.png" width="20"> @else <img src="/assets/online.png" width="20"> @endif
-                        {{ $contract->status }}</TD>
-                     <TD>{{ $contract->sn }}</TD>
-                     <TD>@if($contract->status != 'offline') @if(isset($contract->uptime))  @if($d != 0) {{  $d.' Days,'}} @endif 
-                        @if($h != 0) {{  $h.' Hours,'}} @endif 
-                        @if($m != 0) {{  $m.' Minutes'}} @endif 
-
-
-                      @endif @endif
-                       
-                     </TD>
-                     <TD>{{ $contract->address }}</TD>
-               </tr>
-               @endforeach
-             
+                        </TD>
+                        <TD>{{ $contract->address }}</TD>
+                  </tr>
+                  @endforeach
+            @endif
             </tbody>
          </table>
       </div>

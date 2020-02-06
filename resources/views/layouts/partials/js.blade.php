@@ -91,7 +91,8 @@ var options = {
       lineColor: "black",
       labelFontColor: "black",
       tickColor: "black",
-      includeZero: false
+      includeZero: false,
+      titleFontWeight: "bold"
    },
   
    toolTip: {

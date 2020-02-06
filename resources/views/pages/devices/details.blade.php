@@ -150,6 +150,7 @@
             </thead>
            
             <tbody>
+            @if(isset($devices->interfaces)) 
                @foreach($devices->interfaces as $contract)
                 @if(strpos( $contract->name, '(p)' ) !== false)
                  @php (@$is_online = 'false')
@@ -237,6 +238,8 @@
                </tr>
                 @endif
                @endforeach
+
+          @endif
             </tbody>
          </table>
       </div>

@@ -91,12 +91,14 @@ var options = {
       valueFormatString: '<?php echo $valueoftime; ?>'
    },
    axisY: {
+
       title: "Data Volume",
       titleFontColor: "black",
       lineColor: "black",
       labelFontColor: "black",
       tickColor: "black",
-      includeZero: false
+      includeZero: false,
+      titleFontWeight: "bold"
    },
   
    toolTip: {

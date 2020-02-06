@@ -8,8 +8,11 @@
    if($('input[name="filter_radio"]:checked').val() == 'hourly'){
       $("#end_date").attr("disabled", true);
       $("#end_date").val('');
+      $("#stard_date").val('<?php echo date("Y-m-d"); ?>');
    }else{
        $("#end_date").attr("disabled", false);
+       $("#stard_date").val('<?php echo date("Y-m-d"); ?>');
+       $("#end_date").val('<?php echo date("Y-m-d", time() + 86400); ?>');
    }
 
  }  
@@ -197,7 +200,7 @@
       </div>
 
       <div class="container-fluid">
-         <h2><div style="display: inline" id="reportheading">Hourly</div> Report</h2>
+         <h2 style="font-weight: 800;"><div style="display: inline;" id="reportheading">Hourly</div> Report</h2>
          <hr/>
       </div>
 
@@ -208,6 +211,7 @@
              <div class="col-sm-3">
                <select class="form-control" id="load_interfaces_select" onchange="load_interface(this.value)">
                    <option value="">-- Select -- </option>
+               @if(isset($devices))
                   @foreach($devices as $contract)
                     
                      
@@ -215,6 +219,7 @@
                       
 
                   @endforeach
+               @endif
                </select>
              </div>
               <label for="staticEmail" class="col-sm-1 col-form-label">Interface:</label>
