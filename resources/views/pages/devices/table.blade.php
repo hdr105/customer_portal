@@ -42,10 +42,10 @@
 
 <?php 
 
-        $datevalue = '';
-        $download = '';
-        $upload = '';
-        $total = '';
+$datevalue = '';
+$download = '';
+$upload = '';
+$total = '';
 foreach($devices->data->usages as $key => $contract): 
             $datetime = explode("T",$contract->from_date);
             $yyyy = explode("-",$datetime[0]);
@@ -91,16 +91,17 @@ var ctx = document.getElementById('myChart').getContext('2d');
 var chart = new Chart(ctx, {
         type: 'line',
         scaleFontColor: 'black',
+
         data: {
             scaleFontColor: 'red',
             labels: [<?php echo $datevalue  ?>],
             datasets: [{
                label: 'Download',
-            
+               color:'black',
                radius: 5,
                fill: false,
-               borderColor: 'blue',
-               backgroundColor: 'blue',
+               borderColor: '#5c5cad',
+               backgroundColor: '#5c5cad',
                data: [<?php echo $download  ?>],
               
            }, {
@@ -136,6 +137,10 @@ var chart = new Chart(ctx, {
                },
                tooltips: {
                   mode: 'index',
+               },
+               legend: {
+                  position: 'bottom',
+                  fontColor: 'black',
                },
             }
 
