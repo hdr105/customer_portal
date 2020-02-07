@@ -39,184 +39,106 @@
                        
                      </tbody>
 </table>
-<?php
-   if($devices->data->type == 'hourly'){
-      $valueoftime = "HH:mm";
-      $intervaltype = "hour";
-      $interval = '0';
-   }elseif($devices->data->type == 'daily'){
-       $valueoftime = "DD MMM";
-       $intervaltype = "day";
-       $interval = '';
-   }elseif($devices->data->type == 'monthly'){
-      $valueoftime = "MMM YYYY";
-      $intervaltype = "month";
-      $interval = '1';
-   }
 
- ?>
+<?php 
 
-<script>
-
-
-      var nameofcolum = "";
-      if($('input[name="filter_radio"]:checked').val() == 'hourly'){ 
-         nameofcolum = "Hourly";
-      }
-      if($('input[name="filter_radio"]:checked').val() == 'daily'){
-         nameofcolum = "Daily";
-      }
-      if($('input[name="filter_radio"]:checked').val() == 'monthly'){
-         nameofcolum = "Monthly";
-      }
-      
-function load_graph() {
-
-var options = {
-   exportEnabled: true,
-   animationEnabled: true,
-  
-   title:{
-      text: nameofcolum + " Usage",
-      fontWeight: "bold",
-      fontSize: 26,
-      fontColor: "black",
-   },
-   subtitles: [{
-      text: ""
-   }],
-   axisX: {
-      interval: 1 ,
-      intervalType: '<?php echo $intervaltype ?>',
-      valueFormatString: '<?php echo $valueoftime; ?>'
-   },
-   axisY: {
-
-      title: "Data Volume",
-      titleFontColor: "black",
-      lineColor: "black",
-      labelFontColor: "black",
-      tickColor: "black",
-      includeZero: false,
-      titleFontWeight: "bold"
-   },
-  
-   toolTip: {
-      shared: true
-   },
-   legend: {
-      cursor: "pointer",
-      itemclick: toggleDataSeries
-   },
-   data: [{
-      type: "spline",
-      name: "Download",
-      showInLegend: true,
-      xValueFormatString: "MMM YYYY",
-      yValueFormatString: "#,###.##",
-      dataPoints: [
-      <?php $totalsum = array();
-       foreach($devices->data->usages as $key => $contract): 
+        $datevalue = '';
+        $download = '';
+        $upload = '';
+        $total = '';
+foreach($devices->data->usages as $key => $contract): 
             $datetime = explode("T",$contract->from_date);
             $yyyy = explode("-",$datetime[0]);
             $time = explode(":",$datetime[1]);
-            $totalsum[$key] = $contract->down + $contract->up;
-            $datevalue= "";
             if($devices->data->type == 'hourly'){
-               $datevalue = $yyyy[0].','.($yyyy[1]-1).','.$yyyy[2].','.$time[0].','.$time[1];
+               $datevalue .= '`'.$time[0].':'.$time[1].'`,';
             }elseif($devices->data->type == 'monthly'){
-              $datevalue = $yyyy[0].','.($yyyy[1]-1).','.$yyyy[2].','.$time[0].','.$time[1];
+               $monthName = date("F", mktime(0, 0, 0, $yyyy[1], 10));
+               $datevalue .= '`'.$monthName.' '.$yyyy[0].'`,';
             }elseif($devices->data->type == 'daily')  {
-               $datevalue = $yyyy[0].','.($yyyy[1]-1).','.$yyyy[2];
-               
+               $monthNum = 5;
+               $monthName = date("F", mktime(0, 0, 0, $yyyy[1], 10));
+               $datevalue .= '`'.$yyyy[2].' '.$monthName.'`,';
             }
-         ?>
+        $download .= '`'.round($contract->down, 2).'`,';
 
-        {x: new Date(<?php echo $datevalue; ?>) , y: <?php echo $contract->down; ?>  },
-      <?php endforeach; ?>
-      ]
-   },
-   {  
-      lineColor:"green",
-      legendMarkerColor: "green",
-      markerColor: "green",
-       markerType: "square",
-      type: "spline",
-      showInLegend: true,
-      name: "Upload",
-      showInLegend: true,
-      xValueFormatString: "MMM YYYY",
-      yValueFormatString: "#,###.##",
-      dataPoints: [
-         <?php $totalsum = array();
-             foreach($devices->data->usages as $key => $contract): 
-            $datetime = explode("T",$contract->from_date);
-            $yyyy = explode("-",$datetime[0]);
-            $time = explode(":",$datetime[1]);
-            $datevalue= "";
-            if($devices->data->type == 'hourly'){
-               $datevalue = $yyyy[0].','.($yyyy[1]-1).','.$yyyy[2].','.$time[0].','.$time[1];
-            }elseif($devices->data->type == 'monthly'){
-               $datevalue = $yyyy[0].','.($yyyy[1]-1).','.$yyyy[2].','.$time[0].','.$time[1];
-            }elseif($devices->data->type == 'daily')  {
-              $datevalue = $yyyy[0].','.($yyyy[1]-1).','.$yyyy[2];
-            }
-           $totalsum[$key] = $contract->down + $contract->up;
+        $upload .= '`'.round($contract->up, 2).'`,';    
+        $total .= '`'.round($contract->down + $contract->up, 2).'`,';  
+?>
 
-         ?>
+        
+<?php endforeach; ?>
 
-        {x: new Date(<?php echo $datevalue; ?>) , y: <?php echo $contract->up; ?>  },
-      <?php endforeach; ?>
-      ]
-   },
-   {
 
-      type: "spline",
-      lineColor:"black",
-      legendMarkerColor: "black",
-      markerType: "square",
-      markerSize: 10,
-      markerColor: "black",
-      name: "Total",
-      lineDashType: "dash",
-      showInLegend: true,
-      xValueFormatString: "MMM YYYY",
-      yValueFormatString: "#,###.##",
-      dataPoints: [
-         <?php $totalsum = array();
-             foreach($devices->data->usages as $key => $contract): 
-            $datetime = explode("T",$contract->from_date);
-            $yyyy = explode("-",$datetime[0]);
-            $time = explode(":",$datetime[1]);
-            $datevalue= "";
-            if($devices->data->type == 'hourly'){
-               $datevalue = $yyyy[0].','.($yyyy[1]-1).','.$yyyy[2].','.$time[0].','.$time[1];
-            }elseif($devices->data->type == 'monthly'){
-               $datevalue = $yyyy[0].','.($yyyy[1]-1).','.$yyyy[2].','.$time[0].','.$time[1];
-            }elseif($devices->data->type == 'daily')  {
-               $datevalue = $yyyy[0].','.($yyyy[1]-1).','.$yyyy[2];
-            }
-           $totalsum[$key] = $contract->down + $contract->up;
+<script type="text/javascript">
 
-         ?>
-
-        {x: new Date(<?php echo $datevalue; ?>) , y: <?php echo $contract->down + $contract->up; ?>  },
-      <?php endforeach; ?>
-      ]
-   }]
-};
-   $("#chartContainer").CanvasJSChart(options);
-
-   function toggleDataSeries(e) {
-      if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-         e.dataSeries.visible = false;
-      } else {
-         e.dataSeries.visible = true;
-      }
-      e.chart.render();
-   }
-
+var nameofcolum = "";
+if($('input[name="filter_radio"]:checked').val() == 'hourly'){ 
+   nameofcolum = "Hourly";
 }
+if($('input[name="filter_radio"]:checked').val() == 'daily'){
+   nameofcolum = "Daily";
+}
+if($('input[name="filter_radio"]:checked').val() == 'monthly'){
+   nameofcolum = "Monthly";
+}
+if(chart != null) {
 
+    chart.destroy(); 
+}
+   
+var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+        type: 'line',
+        scaleFontColor: 'black',
+        data: {
+            scaleFontColor: 'red',
+            labels: [<?php echo $datevalue  ?>],
+            datasets: [{
+               label: 'Download',
+            
+               radius: 5,
+               fill: false,
+               borderColor: 'blue',
+               backgroundColor: 'blue',
+               data: [<?php echo $download  ?>],
+              
+           }, {
+               label: 'Upload',
+               pointStyle:'rectRot',
+               radius: 5,
+               borderColor: 'green',
+               backgroundColor: 'green',
+               fill: false,
+               data: [<?php echo $upload  ?>],
+               
+            }, {
+               borderDash: [5, 5],
+               pointStyle:'rect',
+               radius: 8,
+               label: 'Total',
+               borderColor: 'black',
+               backgroundColor: 'black',
+               fill: false,
+               data: [<?php echo $total  ?>],
+               
+            }],
+       },
+
+       options: {
+               responsive: true,
+               title: {
+                  display: true,
+                  text: nameofcolum + " Usage",
+                  fontSize:24,
+                  fontColor: 'black',
+                  fontStyle: 'bold',
+               },
+               tooltips: {
+                  mode: 'index',
+               },
+            }
+
+});
 
 </script>

@@ -1,3 +1,4 @@
+
 <script>
 close=document.getElementById("close");close.addEventListener('click',function(){close.style.opacity="0"; setTimeout(function(){ close.style.display="none"; }, 600); },false);
    var _portal = {
@@ -11,6 +12,12 @@ close=document.getElementById("close");close.addEventListener('click',function()
 <script src="/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="/assets/libs/chart.js/dist/Chart.min.js"></script>
 <script src="/assets/libs/chart.js/Chart.extension.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
 <script src="/assets/libs/highlight/highlight.pack.min.js"></script>
 <script src="/assets/libs/flatpickr/dist/flatpickr.min.js"></script>
 <script src="/assets/libs/list.js/dist/list.min.js"></script>
@@ -67,104 +74,6 @@ $("#end_date").change(function () {
       $("#datevalidation").html('&nbsp;');
     }
 });
-
-
-
-
-  function load_graph() {
-
-var options = {
-   exportEnabled: true,
-   animationEnabled: true,
-   title:{
-      text: ""
-   },
-   subtitles: [{
-      text: ""
-   }],
-   axisX: {
-      
-   },
-   axisY: {
-      title: "Data Volume",
-      titleFontColor: "black",
-      lineColor: "black",
-      labelFontColor: "black",
-      tickColor: "black",
-      includeZero: false,
-      titleFontWeight: "bold"
-   },
-  
-   toolTip: {
-      shared: true
-   },
-   legend: {
-      cursor: "pointer",
-      itemclick: toggleDataSeries
-   },
-   data: [{
-      type: "spline",
-      name: "Donwload",
-      showInLegend: true,
-      xValueFormatString: "MMM YYYY",
-      yValueFormatString: "#,##0 MB",
-      dataPoints: []
-   },
-   {  
-      lineColor:"green",
-      legendMarkerColor: "green",
-      markerColor: "green",
-       markerType: "square",
-      type: "spline",
-      showInLegend: true,
-      name: "Upload",
-      showInLegend: true,
-      xValueFormatString: "MMM YYYY",
-      yValueFormatString: "#,##0 MB",
-      dataPoints: []
-   },
-   {
-
-      type: "spline",
-      lineColor:"black",
-      legendMarkerColor: "black",
-      markerType: "square",
-      markerSize: 10,
-      markerColor: "black",
-      name: "Total",
-      lineDashType: "dash",
-      showInLegend: true,
-      xValueFormatString: "MMM YYYY",
-      yValueFormatString: "#,##0 MB",
-      dataPoints: []
-   }]
-};
-   $("#chartContainer").CanvasJSChart(options);
-
-   function toggleDataSeries(e) {
-      if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-         e.dataSeries.visible = false;
-      } else {
-         e.dataSeries.visible = true;
-      }
-      e.chart.render();
-   }
-
-}
-  load_graph();
-
-
-    
- // function change_plus_mins(){
- //      if ($("#iconof").hasClass( "fa-plus" ) ) {
- //        $('#iconof').removeClass('fa-plus').addClass('fa-minus');
- //      }else{
- //        $('#iconof').removeClass('fa-minus').addClass('fa-plus');
- //      }
- // }
-
-
-
 
 </script>
 

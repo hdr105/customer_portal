@@ -2,14 +2,16 @@
 @section('content')
 
 <script type="text/javascript">
-    
+
  function set_enddate_val(){
 
    if($('input[name="filter_radio"]:checked').val() == 'hourly'){
+      $("#hideenddate").slideUp();
       $("#end_date").attr("disabled", true);
       $("#end_date").val('');
       $("#stard_date").val('<?php echo date("Y-m-d"); ?>');
    }else{
+       $("#hideenddate").slideDown();
        $("#end_date").attr("disabled", false);
        $("#stard_date").val('<?php echo date("Y-m-d"); ?>');
        $("#end_date").val('<?php echo date("Y-m-d", time() + 86400); ?>');
@@ -71,7 +73,8 @@
                            $("#time_val").html(nameofcolum);
                            $("#searchbtn").html('Search');
                            $("#searchbtn").attr("disabled", false);
-                           load_graph();
+                           
+
                         }
                });
 
@@ -140,8 +143,16 @@
    setTimeout(function(){ load_interface(<?php echo Request::segment(4) ?>); }, 2000);
   <?php } ?>
 
- setTimeout(function(){ set_enddate_val();  }, 2000);
+
+
+ setTimeout(function(){ set_enddate_val();   }, 2000);
+
+
+
+
 </script>
+
+
 
 <div class="container-fluid">
 <div class="row justify-content-center">
@@ -200,7 +211,7 @@
       </div>
 
       <div class="container-fluid">
-         <h2 style="font-weight: 800;"><div style="display: inline;" id="reportheading">Hourly</div> Report</h2>
+         <h2><div style="display: inline;" id="reportheading">Hourly</div> Report</h2>
          <hr/>
       </div>
 
@@ -236,19 +247,26 @@
            </div>
             
            <div class="form-group row">
+          
              <label for="staticEmail" class="col-sm-1 col-form-label">Start Date:</label>
              <div class="col-sm-3">
 
               <input type="text" name="startDate"  placeholder="YYYY-MM-DD" class="form-control" value="<?php echo date("Y-m-d") ?>" id="stard_date">
              </div>
+             
            </div>
-           <div class="form-group row">
-             <label for="staticEmail" class="col-sm-1 col-form-label">End Date:</label>
-             <div class="col-sm-3">
-               <input type="text" placeholder="YYYY-MM-DD" name="endDate" class="form-control" id="end_date">
-               <div id="datevalidation" style="color:red; font-size:13px">&nbsp;</div>
-             </div>
-           </div>
+              
+                    <div class="form-group row" id="hideenddate">
+                           
+                               <label for="staticEmail" class="col-sm-1 col-form-label">End Date:</label>
+                               <div class="col-sm-3">
+                                 <input type="text" placeholder="YYYY-MM-DD" name="endDate" class="form-control" id="end_date">
+                                 <div id="datevalidation" style="color:red; font-size:13px">&nbsp;</div>
+                               </div>
+                          
+                    </div>
+           
+
            <div class="form-group row">
              <div class="col-sm-3">
                <button type="button" id="searchbtn" onclick="load_report_table()" class="btn btn-secondary">Search</button>
@@ -259,11 +277,13 @@
          
       </div>
        <div class="container-fluid">
+        
          <br/><br/>
           
-             <div id="chartContainer" style="height: 370px; width: 100%;"></div>
-         
+           <canvas id="myChart" width="400" height="100"></canvas>
+           
          <br/><br/>
+               
        </div>
 
          <div class="container-fluid">
@@ -299,5 +319,6 @@
       </div>
    </div>
 </div>
+
 
 @endsection
