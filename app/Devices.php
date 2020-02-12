@@ -33,7 +33,12 @@ class Devices extends Model
          $output = curl_exec($ch1);
          curl_close($ch1);
          $response['withcode'] = json_decode($output);
-         return $response['withcode']->data->data;
+         
+         if(isset($response['withcode']->data->data)){
+             return $response['withcode']->data->data;
+         }else{
+            return '';
+         }
     }
 
     public function get_group_id($contact){
@@ -47,13 +52,19 @@ class Devices extends Model
         $outputid = curl_exec($chid);
         curl_close($chid);
         $response_id['withcode'] = json_decode($outputid);
-        return $response_id['withcode']->data->data;
+      
+
+         if(isset($response_id['withcode']->data->data)){
+             return $response_id['withcode']->data->data;
+         }else{
+            return '';
+         }
     }
 
 
     public function curl_request_fun($contact){
     	
-       
+
         $headers[] = 'Authorization: Bearer ' . $this->acces_token();
         $ch9 = curl_init();
         curl_setopt($ch9, CURLOPT_URL, 'https://api.ic.peplink.com/rest/o/'.$this->get_organization_id($contact).'/g/'.$this->get_group_id($contact).'/d/basic');
@@ -64,9 +75,13 @@ class Devices extends Model
         curl_setopt($ch9, CURLOPT_TIMEOUT, 60);
         $authToken = curl_exec($ch9);
         $datafull = json_decode($authToken);
-
+         
+        if(isset($datafull->data)){
+            return $datafull->data;
+        }else{
+            return '';
+        }
         
-        return $datafull->data;
         //  // echo "<pre>";
         //  // print_r($datafull);
         //  // echo "</pre>";
@@ -76,7 +91,7 @@ class Devices extends Model
 
     public function curl_request_details($contact,$device_id){
        
-       
+
         $headers_auth[] = 'Authorization: Bearer ' . $this->acces_token();
         $ch10 = curl_init();
         curl_setopt($ch10, CURLOPT_URL, 'https://api.ic.peplink.com/rest/o/'.$this->get_organization_id($contact).'/g/'.$this->get_group_id($contact).'/d/'.$device_id);
@@ -89,10 +104,7 @@ class Devices extends Model
         $datafull12 = json_decode($authToken12);
 
 
-         // echo "<pre>";
-         // print_r($datafull12->data);
-         // echo "</pre>";
-         // die;
+        
         return $datafull12->data;
     }
 
@@ -120,7 +132,7 @@ class Devices extends Model
         
     }   
 
-    public function curl_csv_details($device_id,$filter_radio,$interface_selected,$stard_date,$end_date,$contact){
+    public function curl_csv_details($device_id,$filter_radio,$interface_selected,$stard_date,$end_date,$contact,$device_name,$interfacename){
         
 
        
@@ -140,9 +152,12 @@ class Devices extends Model
        
         $authToken1 = curl_exec($chcsv);
        // echo $authToken1->monthly_usage_2019-12-01_2020-01-31.csv; 
-
+        
+        $interfacename = str_replace(" ","-",$interfacename);
+        $device_name= str_replace(" ","-",$device_name);
+        $filename = $device_name."-".$interfacename."-".$filter_radio."-".date('m/d/Y-h:i:s', time());
        header('Content-Type: text/csv; charset=utf-8');
-       header("Content-disposition: attachment; filename=report.csv");
+       header("Content-disposition: attachment; filename=".$filename.".csv");
        echo $authToken1;
        die;
     }   

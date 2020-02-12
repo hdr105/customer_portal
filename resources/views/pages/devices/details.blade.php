@@ -39,9 +39,38 @@
 
 </style>
 
+
+
+<script type="text/javascript">
+
+     function load_details_data(){
+              
+               $("#details_data").html('<center><img src="/assets/spinner.gif" width="60"></center>');
+               $.ajaxSetup({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                        }
+                    });
+
+               $.ajax({
+                        url: "/portal/devices/get-details-data",
+                        dataType: "html",
+                        method: 'post',
+                        data: {
+                           devices: <?php echo $devices->id; ?>
+                        },
+                        success: function(result){
+                           $("#details_data").html(result);
+                        }
+               });
+
+   }
+//setTimeout(function(){ load_details_data();   }, 2000);
+</script>
+
 <div class="container-fluid">
-<div class="row justify-content-center">
-<div class="col-12">
+
+            <div class="col-12">
    <!-- Header -->
    <div class="header mt-md-5">
       <div class="header-body">
@@ -89,8 +118,13 @@
                         @php (@$is_uptime_online = 'false') 
 
                         @if(isset($devices->status))
-                        @if($devices->status == 'offline') @php (@$is_uptime_online = 'true')  <img src="/assets/offline.png" width="20"> @else <img src="/assets/online.png" width="20"> @endif
-                           {{ $devices->status }}
+                                @if($devices->status == 'offline') @php (@$is_uptime_online = 'true')  <img src="/assets/offline.png" width="20"> @else <img src="/assets/online.png" width="20"> 
+                                @endif
+                               {{ $devices->status }}
+                            @if($devices->status == 'offline')  
+                                @php ($datetime = explode("T",$devices->offline_at))
+                                (Since {{ $datetime[1] }}, {{ $datetime[0] }})   
+                            @endif
                         @endif
                   </td>
                </tr>
@@ -98,14 +132,24 @@
                   <th scope="row">{{utrans("devices.serial")}} Number</th>
                   <td>@if(isset($devices->sn)) {{ $devices->sn }}  @endif</td>
                </tr>
-                <tr>
-                  <th scope="row">Model</th>
-                  <td>@if(isset($devices->model)) {{ $devices->model }}  @endif</td>
-               </tr>
-                <tr>
-                  <th scope="row">Remote Access</th>
-                  <td>@if(isset($devices->ddns_name)) {{ $devices->ddns_name }}.mypep.link  @endif</td>
-               </tr>
+                @if(strpos($devices->name, 'FusionHub') !== false) 
+                    @else 
+                    <tr>
+                      <th scope="row">Model</th>
+                      <td>@if(isset($devices->model)) {{ $devices->model }}  @endif</td>
+                   </tr>
+                @endif
+               @if(strpos($devices->name, 'FusionHub') !== false) 
+                  <tr>
+                    <th scope="row">Public IP</th>
+                    <td>@if(isset($devices->wtp_ip)) {{ $devices->wtp_ip }} @endif</td>
+                  </tr>
+               @else 
+                  <tr>
+                    <th scope="row">Remote Access</th>
+                    <td>@if(isset($devices->ddns_name)) {{ $devices->ddns_name }}.mypep.link  @endif</td>
+                  </tr>
+               @endif
                 <tr>
                   <th scope="row">Uptime</th>
                   <td>
@@ -128,7 +172,11 @@
    </div>
   </div>
 
-  <div class="card mt-4">
+@if(strpos($devices->name, 'FusionHub') !== false) 
+
+@else 
+<div>
+<div class="card mt-4"  >
       <div class="card-header">
          <h4 class="card-title text-muted mt-3">
             Interface Status
@@ -144,12 +192,12 @@
                   <th>Signal</th> 
                   <th>Signal Strength</th> 
                   <th>Signal Quality</th> 
-                  <th>Monthly | Usage</th> 
+                  
                   <th>Action</th> 
                </tr>
             </thead>
            
-            <tbody>
+            <tbody id="details_data">
             @if(isset($devices->interfaces)) 
                @foreach($devices->interfaces as $contract)
                 @if(strpos( $contract->name, '(p)' ) !== false)
@@ -163,19 +211,21 @@
                   <TD style="text-transform: uppercase;">
                      <!-- && $contract->status != 'Disabled (Activation Required)' -->
                      @if(isset($contract->status))
-                        @if(isset($contract->is_overall_up)) 
+                              @if(isset($contract->is_overall_up)) 
 
-                              @if($contract->is_overall_up == '1')  
-                                    @php (@$is_online = 'true')  
-                                    <img src="/assets/online.png" width="20"> 
+                                    @if($contract->is_overall_up == '1')  
+                                          @php (@$is_online = 'true')  
+                                          <img src="/assets/online.png" width="20"> 
+                                    @else 
+                                          <img src="/assets/offline.png" width="20"> 
+                                    @endif
+
                               @else 
-                                    <img src="/assets/offline.png" width="20"> 
+                                  <img src="/assets/offline.png" width="20"> 
                               @endif
-
-                        @else 
-                            <img src="/assets/offline.png" width="20"> 
-                        @endif
-                           {{ $contract->status }}
+                             {{ $contract->status }}
+                     @else      
+                      <script type="text/javascript">setTimeout(function(){ load_details_data();   }, 2000); </script>
                      @endif
                   </TD>
                   <TD>@if(isset($contract->ip)  && $is_online == 'true') {{ $contract->ip }}  @endif</TD>
@@ -229,7 +279,6 @@
                   </TD>
                   <TD>@if(isset($contract->signal) && $is_online == 'true' ) {{ $contract->signal }} dBm  @endif</TD>
                   <TD>@if(isset($contract->signal_quality) && $is_online == 'true') {{ $contract->signal_quality }} dB @endif</TD>
-                  <TD></TD>
                   <TD>
                      @if($is_online == 'true')
                         <a href="/portal/devices/report/{{ $devices->id }}/{{ $contract->id }}">View Report</a>
@@ -244,6 +293,12 @@
          </table>
       </div>
    </div>
-</div>
+   </div>
+@endif
 
+
+
+
+</div>
+</div>
 @endsection

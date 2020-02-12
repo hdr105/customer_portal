@@ -1,7 +1,7 @@
 @extends('layouts.full')
 @section('content')
 <!-- HEADER -->
-<div class="header index-bg pb-5">
+<div class="header index-bg pb-5" >
    <div class="container-fluid">
       <!-- Body -->
       <div class="header-body-nb">

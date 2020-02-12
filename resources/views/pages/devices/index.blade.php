@@ -23,6 +23,7 @@
          <!-- / .row -->
       </div>
    </div>
+   @if($devices != '')
    <div class="card mt-4">
       <div class="card-header">
          <h4 class="card-title text-muted mt-3">
@@ -83,5 +84,11 @@
          </table>
       </div>
    </div>
+@else
+<div class="alert alert-warning" role="alert">
+  You currently do not have any devices enabled for your profile. Please contact us for assistance.
+</div>
+@endif
+
 </div>
 @endsection

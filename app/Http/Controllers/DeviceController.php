@@ -26,11 +26,13 @@ class DeviceController extends Controller
         $contact = $this->getContact();
         
         $data_devices = new Devices();
+
         $devices  = $data_devices->curl_request_fun($contact);
+       
         return view("pages.devices.index", compact('devices'));
     }
 
-    public function get_device_data($device_id)
+    public function get_view_device_data($device_id)
     {
         $user = get_user();
         $contact = $this->getContact();
@@ -39,6 +41,23 @@ class DeviceController extends Controller
         $devices  = $data_devices->curl_request_details($contact,$device_id);
         return view("pages.devices.details", compact('devices'));
     }
+
+    public function get_device_data()
+    {
+        $device_id = $_POST['devices'];
+
+        $user = get_user();
+        $contact = $this->getContact();
+
+        
+        $data_devices = new Devices();
+        $devices  = $data_devices->curl_request_details($contact,$device_id);
+
+        $view = view("pages.devices.details_data", compact('devices'));
+        echo $view;
+        die;
+    }
+
     public function report_view($device_id,$report_id){
         $user = get_user();
         $contact = $this->getContact();
@@ -51,6 +70,7 @@ class DeviceController extends Controller
     public function get_interfaces(){
         
         $device_id = $_POST['device_id'];
+        
         $user = get_user();
         $contact = $this->getContact();
 
@@ -85,12 +105,15 @@ class DeviceController extends Controller
         $stard_date = $_GET['stard_date'];
         $end_date = $_GET['end_date'];
 
+        $device_name = $_GET['device_name'];
+        $interfacename = $_GET['interface_name'];
+
         $user = get_user();
         $contact = $this->getContact();
        
         
         $data_devices = new Devices();
-        $devices  = $data_devices->curl_csv_details($device_id,$filter_radio,$interface_selected,$stard_date,$end_date,$contact);
+        $devices  = $data_devices->curl_csv_details($device_id,$filter_radio,$interface_selected,$stard_date,$end_date,$contact,$device_name,$interfacename);
         die;
     }
 

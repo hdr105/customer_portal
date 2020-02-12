@@ -12,8 +12,9 @@
                      </thead>
                     
                      <tbody>
-                       
+                          @php (@$grandtotal = 0)    
                          @foreach($devices->data->usages as $key => $contract)
+                          
                            <tr>    
                               <TD>@php ($datetime = explode("T",$contract->from_date))
                                  @if($devices->data->type == 'hourly')
@@ -35,11 +36,14 @@
                                  
                               </TD>
                            </tr>
+                           @php (@$grandtotal+= $totalmb)   
                          @endforeach
                        
                      </tbody>
 </table>
-
+<hr/>
+  <div class="container-fluid" style="text-align: right; padding-right: 20% !important"><h3>Grand Total: {{ number_format(@$grandtotal, 2)  }}</h3></div>
+  <hr/>
 <?php 
 
 $datevalue = '';

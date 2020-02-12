@@ -4,7 +4,7 @@
       <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand" href="{{action("BillingController@index")}}">
-      <img src="/assets/img/logo.png" class="navbar-brand-img mx-auto" alt="Back to dashboard...">
+      <img src="/assets/img/logo.png" class="navbar-brand-img mx-auto" alt="Back to dashboard..." width="200">
       </a>
       <div class="navbar-user d-md-none">
          <div class="dropdown">
@@ -55,10 +55,11 @@
                         <i class="fe fe-package"></i> {{utrans("nav.devices")}}
                      </a>
             </li>
+            
             <li class="nav-item ">
                <a href="/portal/devices/report/0/0" @if(str_contains(Route::getCurrentRoute()->uri(),"devices/report/0/0")) class="nav-link selected" @else class="nav-link" @endif href="{{action("DeviceController@index")}}">
                           <i class="fe fe-printer "></i> 
-               Reports</a>
+               Usage Reports</a>
             </li>
              <!--  <li class="nav-item ">
                      <a style="display: inline"  @if(str_contains(Route::getCurrentRoute()->uri(),"devices")) class="nav-link selected" @else class="nav-link" @endif href="{{action("DeviceController@index")}}">

@@ -3,4 +3,5 @@
 @include('layouts.partials.root-errors')
 @yield('content')
 @include('layouts.partials.js')
+
 </html>

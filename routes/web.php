@@ -111,8 +111,11 @@ Route::group(['middleware' => ['language']], function () {
  	Route::group(['prefix' => 'devices', 'middleware' => ['devices']], function () {
             Route::get("/", "DeviceController@index");
             Route::post("/get-report", "DeviceController@get_report_data");
-            Route::post("/get_interfaces", "DeviceController@get_interfaces");
-            Route::get("/get-device/{id}", "DeviceController@get_device_data");
+            
+             Route::post("/get-report", "DeviceController@get_report_data");
+
+            Route::post("/get-details-data", "DeviceController@get_device_data");
+            Route::get("/get-device/{id}", "DeviceController@get_view_device_data");
 
             Route::get("/report/{device_id}/{interface_id}", "DeviceController@report_view");
 

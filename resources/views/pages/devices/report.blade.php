@@ -92,7 +92,11 @@
        var interface_selected = $("#interface_select").val();
        var stard_date = $("#stard_date").val();
        var end_date = $("#end_date").val();
-       window.location.href = "/portal/devices/get_csv_data?device_id="+ device_id +"&filter_radio="+ filter_radio +"&interface_selected="+ interface_selected +"&stard_date="+ stard_date +"&end_date="+ end_date;
+
+       var devicename = $( "#load_interfaces_select option:selected" ).text();
+       var interfacename = $( "#interface_select option:selected" ).text();
+       
+       window.location.href = "/portal/devices/get_csv_data?device_id="+ device_id +"&filter_radio="+ filter_radio +"&interface_selected="+ interface_selected +"&stard_date="+ stard_date +"&end_date="+ end_date +"&device_name="+ devicename +"&interface_name="+ interfacename;
    }
 
    function load_interface(value){
@@ -177,6 +181,10 @@
          <!-- / .row -->
       </div>
    </div>
+
+
+  @if($devices != '')
+
    <div class="card mt-4">
       <div class="card-header">
          <h4 class="card-title text-muted mt-3">
@@ -224,11 +232,7 @@
                    <option value="">-- Select -- </option>
                @if(isset($devices))
                   @foreach($devices as $contract)
-                    
-                     
                         <option value="{{ $contract->id }}"  @if($contract->id ==  Request::segment(4)) selected @endif> {{ $contract->name }} </option>
-                      
-
                   @endforeach
                @endif
                </select>
@@ -309,6 +313,7 @@
                   </table>
                </div>
          </div>
+
       <div class="container-fluid">
             <br/>
           <div class="form-group row">
@@ -318,6 +323,18 @@
            </div>
       </div>
    </div>
+@else
+<div class="alert alert-warning" role="alert">
+  At least one device is required on your account to view reports. Please contact us for assistance.
+</div>
+@endif
+
+
+
+
+
+
+
 </div>
 
 
