@@ -41,8 +41,8 @@
                        
                      </tbody>
 </table>
-<hr/>
-  <div class="container-fluid" style="text-align: right; padding-right: 20% !important"><h3>Grand Total: {{ number_format(@$grandtotal, 2)  }}</h3></div>
+  <hr/>
+      <div class="container-fluid" style="text-align: right; padding-right: 18% !important"><h3>Grand Total: {{ number_format(@$grandtotal, 2)  }} MB</h3></div>
   <hr/>
 <?php 
 

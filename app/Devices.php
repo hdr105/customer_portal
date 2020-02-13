@@ -153,9 +153,9 @@ class Devices extends Model
         $authToken1 = curl_exec($chcsv);
        // echo $authToken1->monthly_usage_2019-12-01_2020-01-31.csv; 
         
-        $interfacename = str_replace(" ","-",$interfacename);
-        $device_name= str_replace(" ","-",$device_name);
-        $filename = $device_name."-".$interfacename."-".$filter_radio."-".date('m/d/Y-h:i:s', time());
+        $interfacename = str_replace(" ","",$interfacename);
+        $device_name= str_replace(" ","",$device_name);
+        $filename = $device_name."-".$interfacename."-".$filter_radio."-".date('m-d-Y-h-i-s', time());
        header('Content-Type: text/csv; charset=utf-8');
        header("Content-disposition: attachment; filename=".$filename.".csv");
        echo $authToken1;
