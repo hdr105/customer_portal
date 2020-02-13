@@ -6,13 +6,17 @@
                         <tr>
                            <th id="time_val">Hourly</th>
                            <th>Download</th>
+                           <th style="width:140px;"></th>
                            <th>Upload</th>
+                           <th style="width:140px;"></th>
                            <th>Total</th> 
                         </tr>
                      </thead>
                     
                      <tbody>
-                          @php (@$grandtotal = 0)    
+                          @php (@$grandtotal = 0)
+                          @php (@$downloadtotal = 0)
+                          @php (@$uploadtotal = 0)    
                          @foreach($devices->data->usages as $key => $contract)
                           
                            <tr>    
@@ -29,21 +33,35 @@
                                  @endif
                               </TD>
                               <TD>{{ number_format($contract->down, 2) }} MB</TD>
+                              <TD></TD>
                               <TD>{{ number_format($contract->up, 2) }} MB</TD>
+                              <TD></TD>
                               <TD>
                                  @php ($totalmb = ($contract->down + $contract->up) )
                                  {{ number_format($totalmb, 2) }} MB
                                  
                               </TD>
                            </tr>
-                           @php (@$grandtotal+= $totalmb)   
+                           @php (@$grandtotal += $totalmb)
+                           @php (@$downloadtotal += $contract->down)
+                           @php (@$uploadtotal += $contract->up)   
                          @endforeach
-                       
+
                      </tbody>
+                     <tfoot>
+                        <tr>
+                          <td style="text-align: right;"><h3>Download Total: </h3></td>
+                          <td><h3>{{ number_format(@$downloadtotal, 2)  }} MB</h3></td>
+                          <td style="text-align: right;"><h3>Upload Total: </h3></td>
+                          <td><h3>{{ number_format(@$uploadtotal, 2)  }} MB</h3></td>
+                          <TD style="text-align: right;"><h3>Grand Total: </h3></TD>
+                          <td><h3>{{ number_format(@$grandtotal, 2)  }} MB</h3></td>
+                        </tr>
+                     </tfoot>
 </table>
-  <hr/>
-      <div class="container-fluid" style="text-align: right; padding-right: 18% !important"><h3>Grand Total: {{ number_format(@$grandtotal, 2)  }} MB</h3></div>
-  <hr/>
+ <!--  <hr/>
+      <div class="container-fluid" style="text-align: right; padding-right: 18% !important"></div>
+  <hr/> -->
 <?php 
 
 $datevalue = '';

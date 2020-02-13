@@ -155,11 +155,11 @@ class Devices extends Model
         
         $interfacename = str_replace(" ","",$interfacename);
         $device_name= str_replace(" ","",$device_name);
-        $filename = $device_name."-".$interfacename."-".$filter_radio."-".date('m-d-Y-h-i-s', time());
-       header('Content-Type: text/csv; charset=utf-8');
-       header("Content-disposition: attachment; filename=".$filename.".csv");
-       echo $authToken1;
-       die;
+        $filename = $device_name."-".$interfacename."-".ucfirst($filter_radio)."-".date('m-d-Y-h-i-s', time());
+        header('Content-Type: text/csv; charset=utf-8');
+        header("Content-disposition: attachment; filename=".$filename.".csv");
+        echo $authToken1;
+        die;
     }   
 
 
