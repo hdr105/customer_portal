@@ -77,20 +77,11 @@
    <!-- Card -->
    <div class="card">
       <div class="card-header">
-         <h4 class="card-title text-muted mt-3">
-           {{utrans("data_usage.usageHistory")}}
+         <h4 class="text-muted mt-3" style="color:black !important; line-height: 1.6;word-spacing: 5px;">
+           The above data usage reflects your actual cellular data usage for your current billing cycle, and is reported from the SIM card directly. Usage shown under the "Device Reports" section shows usage as reported from the router directly and should always be very close to the same. For billing purposes, the data shown here will always prevail over the Device Reports. However, if you notice a large discrepancy between the two reports, or have any questions about the data usage, please feel free to contact us at any time, either via Live Chat below, calling us at 416-686-1100, or by opening a Support Ticket on the left.
          </h4>
       </div>
-      <div class="card-body">
-         <div class="row align-items-center">
-            <div class="col">
-               <div class="panel-body">
-                  <canvas id="historicalUsage" height="125"></canvas>
-               </div>
-               <p class="mt-4 text-right comment-time-dark">{{utrans("data_usage.monthlyGraphHeader")}}</p>
-            </div>
-         </div>
-      </div>
+      
    </div>
 </div>
 @endsection
