@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 use App\Http\Requests\ProfileUpdateRequest;
+use DB;
 
 use Illuminate\Http\Request;
 use App\Devices;
-
-
 use App\Http\Requests;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
@@ -17,14 +16,24 @@ class DeviceController extends Controller
     private $apiController;
     public function __construct()
     {
+
+
         //$this->apiController = new \SonarSoftware\CustomerPortalFramework\Controllers\ContractController();
     }
 
     public function index()
     {
+        // $tables = DB::select("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name;");
+        // $columns = \Schema::getColumnListing('device_notifications');
+
+        // print_r($columns);
+        // print_r($tables); die;
+
+
+
         $user = get_user();
         $contact = $this->getContact();
-        
+      
         $data_devices = new Devices();
 
         $devices  = $data_devices->curl_request_fun($contact);

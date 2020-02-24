@@ -22,7 +22,6 @@ Route::post("/settings/auth", "AppConfigController@authenticate");
 
 
 
-
 Route::group(['middleware' => ['language']], function () {
     Route::group(['middleware' => ['web','guest']], function () {
         //Unauthenticated routes
