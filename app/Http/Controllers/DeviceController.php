@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 use App\Http\Requests\ProfileUpdateRequest;
-
+use DB;
 use Illuminate\Http\Request;
 use App\Devices;
-
+use Illuminate\Database\QueryException;
 
 use App\Http\Requests;
 use Illuminate\Support\Facades\Cache;
@@ -22,6 +22,7 @@ class DeviceController extends Controller
 
     public function index()
     {
+       
         $user = get_user();
         $contact = $this->getContact();
         
@@ -126,6 +127,8 @@ class DeviceController extends Controller
         }
         return Cache::tags("profile.details")->get(get_user()->contact_id);
     }
+
+
 
   
 }
